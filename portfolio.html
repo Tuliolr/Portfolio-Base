@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Trabalhos - Tulio Lopes Rodrigues</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Press+Start+2P" rel="stylesheet">
+    <script type="text/javascript" src="js/scripts.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.5em;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #007bff;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #007bff;
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+        
+        /* Estilos de Navegação e Caminho */
+        #navigation {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        #navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+        #navigation li {
+            display: inline;
+            margin: 0 15px;
+        }
+        #navigation a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .caminho {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            font-size: 0.8em;
+            color: #777;
+        }
+        .caminho li {
+            display: inline;
+        }
+        .caminho a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        /* Estilos de Miniatura (Projetos) */
+        .miniatura {
+            width: 100%; /* Ocupa a largura total no mobile */
+            height: 250px;
+            margin-bottom: 20px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .miniatura:hover {
+            transform: translateY(-5px);
+        }
+
+        .blackbox {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            box-sizing: border-box;
+            transition: background 0.3s ease;
+        }
+
+        .blackbox:hover {
+            background: rgba(0, 123, 255, 0.8); /* Cor primária no hover */
+        }
+        
+        .blackbox-text h1, .blackbox-text h2 {
+            margin: 0;
+            padding: 0;
+            border: none;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .blackbox-text h1 {
+            font-size: 1.2em;
+            text-shadow: 1px 1px 2px #000;
+        }
+        
+        .blackbox-text h2 {
+            font-size: 0.9em;
+            font-weight: normal;
+        }
+
+        /* Estilo para links de projeto para remover sublinhado */
+        .miniatura a {
+            text-decoration: none;
+            color: inherit;
+            display: block; /* Garante que o link ocupe toda a miniatura */
+            height: 100%;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 30px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Responsive design para telas maiores */
+        @media (min-width: 768px) {
+            .miniatura {
+                width: calc(33.33% - 20px); /* 3 colunas em desktop */
+                margin-right: 30px;
+                display: inline-block;
+                /* Adicionar clear float se necessário, mas inline-block é mais simples aqui */
+            }
+            .miniatura:nth-child(3n + 1) {
+                clear: none;
+            }
+            .miniatura:nth-child(3n) {
+                margin-right: 0; /* Remove margem do último item da linha */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navigation" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Trabalhos</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+        </ul>
+    </div>
+
+    <div class="container">
+
+        <ul class="caminho">
+            <li><a href="index.html">Home</a></li>
+            <li>></li>
+            <li>Trabalhos</li>
+        </ul>
+
+        <h1>Meus Projetos (Trabalhos)</h1>
+
+        <section class="projects-grid">
+            
+            <div style="background-image: url('img/trabalhos/d4.png')" class="miniatura">
+                <a href="jogo1.html">
+                    <div class="blackbox">
+                        <div class="blackbox-text">
+                            <h1>Dommy, The Thief</h1>
+                            <h2>Game Designer | Running Game</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div style="background-image: url('img/trabalhos/m1.png')" class="miniatura">
+                <a href="jogo2.html">
+                    <div class="blackbox">
+                        <div class="blackbox-text">
+                            <h1>Metal Armaggedon</h1>
+                            <h2>Game Designer | Board Game</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div style="background-image: url('img/trabalhos/b2.jpg')" class="miniatura">
+                <a href="jogo3.html">
+                    <div class="blackbox">
+                        <div class="blackbox-text">
+                            <h1>Dream Adventure and Fantasy</h1>
+                            <h2>Game Designer | Card Game</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div style="background-image: url('img/trabalhos/bioquiz.jpg')" class="miniatura">
+                <a href="jogo4.html">
+                    <div class="blackbox">
+                        <div class="blackbox-text">
+                            <h1>BioQuiz</h1>
+                            <h2>Game Designer & Programador | Mobile Game</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div style="background-image: url('img/trabalhos/redtails.jpg')" class="miniatura">
+                <a href="jogo5.html">
+                    <div class="blackbox">
+                        <div class="blackbox-text">
+                            <h1>Red Tails</h1>
+                            <h2>Game Designer | Mobile Game</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            </section>
+
+        <a class="back-link" href="index.html">&larr; Voltar ao início</a>
+
+    </div>
+
+</body>
+</html>

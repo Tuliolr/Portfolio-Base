@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Currículo - Tulio Lopes - Game Designer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Press+Start+2P" rel="stylesheet">
+    <style>
+        /* CSS Integrado para garantir que o estilo seja aplicado */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #007bff;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            color: #007bff;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #007bff;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            font-size: 1.3em;
+        }
+        h3 {
+            color: #555;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+            margin-top: 15px;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 10px 0;
+        }
+        p {
+            margin: 5px 0 10px 0;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        .skills li, .project {
+            margin-bottom: 8px;
+        }
+        .experience, .education {
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 3px solid #ccc;
+        }
+        .experience p, .education p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+        .languages li {
+            font-weight: bold;
+        }
+        /* Estilos de navegação (não serão funcionais sem o CSS e JS externos, mas mantive a estrutura) */
+        #navigation {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        #navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+        #navigation li {
+            display: inline;
+            margin: 0 15px;
+        }
+        #navigation a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .caminho {
+            list-style-type: none;
+            padding: 10px 0;
+            margin: 0;
+            font-size: 0.8em;
+            color: #777;
+        }
+        .caminho li {
+            display: inline;
+        }
+        .caminho a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navigation" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Trabalhos</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        
+        <ul class="caminho">
+            <li><a href="index.html">Home</a></li>
+            <li>></li>
+            <li>Currículo</li>
+        </ul>
+
+        <header>
+            <h1>Tulio Lopes Rodrigues</h1>
+            <p>Game Designer & Desenvolvedor Full-Stack</p>
+        </header>
+
+        <section id="personal-data">
+            <h2>Dados Pessoais</h2>
+            <hr>
+            
+            <h3>Data de Nascimento:</h3>
+            <p>24/04/1991</p>
+
+            <h3>Residência:</h3>
+            <p>Rua Flamboyard n°34 - Serra - ES</p>
+        </section>
+
+        <section id="profile">
+            <h2>Perfil Profissional</h2>
+            <hr>
+            <div class="section-content">
+                <p>Carreira em desenvolvimento na área de Programação, com foco no desenvolvimento de jogos. Profissional graduado em Tecnologia de Jogos Digitais e Programação de Computadores e Dispositivos, graduado em Administração, com experiência no planejamento, gerenciamento de produto, pesquisa e análise, desenvolvimento e lançamento de jogos variados em gênero, jogabilidades e escopo.</p>
+                <p>Busco sempre aperfeiçoamento na área, utilizando visão estratégica sobre tendências e indicadores do mercado de jogos digitais, atuando no mapeamento de oportunidades e nichos de mercados inexplorados.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Competências Chave</h2>
+            <hr>
+            <ul class="skills">
+                <li>Design & Criação: Facilidade para transitar entre áreas técnicas e criativas (ideais, roteiros, script, peças conceituais). Aptidão para escrita técnica e criativa através de protótipos e descrições textuais/visuais.</li>
+                <li>Desenvolvimento & Engine: Domínio sobre diversos softwares de desenvolvimento de games e aplicações digitais, incluindo Unity, Unreal, Constructor 3D e Game Maker.</li>
+                <li>Linguagens de Programação: C#, C++, Java, Java Script, Python</li>
+                <li>Gestão de Projeto & Game Design: Gerenciamento de ideias, prototipagem, testes de mecânicas, desenho de sistemas, Level Design, balanceamento, System Economy. Experiência com Metodologia Ágil: Kanban, Scrum, Notion, Excel e plataforma Jira.</li>
+                <li>Gráfico & UX/UI: Domínio de softwares gráficos (Photoshop, Figma, After Effects, Blender, Maya). Experiência com Designer, SEO, UI, UX e Webpack.</li>
+            </ul>
+        </section>
+        
+        <section id="technical-skills">
+            <h2>Habilidades Técnicas Adicionais</h2>
+            <hr>
+            
+            <h3>Game Engine</h3>
+            <p>Unity / Unreal / Construct/ Game Maker</p>
+            
+            <h3>Desenvolvimento Web e Programação</h3>
+            <p>HTML / CSS / JavaScript / C# / PHP / JAVA / Python / NodeJS / </p>
+            
+            <h3>Frameworks</h3>
+            <p>Angular / ReactJS / VueJS</p>
+            
+            <h3>Artes Digitais</h3>
+            <p>Illustrator / Photoshop / 3DMax</p>
+        </section>
+
+
+        <section id="work-experience">
+            <h2>Experiência Profissional</h2>
+            <hr>
+
+            <div class="experience">
+                <h3>Game Designer UX/UI - Connect.Black</h3>
+                <p>Período: 08/2022 – 11/2022</p>
+                <ul>
+                    <li>Criação de interfaces do jogo, mecânicas, fluxogramas, prototipação, *wireframes*, documentação e gerenciamento.</li>
+                </ul>
+            </div>
+
+            <div class="experience">
+                <h3>Professor Conteudista - Produção em Design de Games - VG EDUCACIONAL</h3>
+                <p>Período: 07/2022 – 11/2022</p>
+                <ul>
+                    <li>Coordenação de atividades do trabalho final de curso: cronograma, fases de produção, apresentação e defesa do projeto.</li>
+                </ul>
+            </div>
+
+            <div class="experience">
+                <h3>Desenvolvedor e Game Designer - SIDI</h3>
+                <p>Período: 07/2021 – 01/2023</p>
+                <ul>
+                    <li>Ministrar palestras sobre Gameficação, Advergames, Introdução a Unreal e Mapas Aleatórios em Unity.</li>
+                </ul>
+            </div>
+            
+            <div class="experience">
+                <h3>Game Designer - GAME JAW SHAWEE</h3>
+                <p>Período: 01/2020 – 07/2020</p>
+                <ul>
+                    <li>Desenvolvimento e criação de desafios interativos.</li>
+                </ul>
+            </div>
+            
+            <div class="experience">
+                <h3>Programador - CSI SOLUÇÕES & TECNOLOGIA</h3>
+                <p>Período: 05/2019 – 08/2019</p>
+                <ul>
+                    <li>Codificação de sistemas e implementação de adequações. Registro de informações técnica.</li>
+                </ul>
+            </div>
+            
+            <div class="experience">
+                <h3>Programador Front-End - MercosulLatan</h3>
+                <p>Período: 12/2018 – 02/2019</p>
+                <ul>
+                    <li>Criação de Páginas Web, planejamento de Layouts, configuração e manutenção da página.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section id="projects">
+            <h2>Principais Projetos (Game Designer)</h2>
+            <hr>
+            <div class="section-content">
+                <ul>
+                    <li class="project">Dommy, The Thief – Running Game (Projeto Acadêmico)</li>
+                    <li class="project">Metal Armaggedon – Board Game (Projeto Pessoal)</li>
+                    <li class="project">Dream Adventure and Fantasy - Card Game (Projeto Pessoal - 2014)</li>
+                    <li class="project">BioQuiz – Mobile Game (Free Lance para Turma de Bio Medicina na Multivix - 2019)</li>
+                    <li class="project">Red Tails - Mobile Game</li>
+                    <li class="project">Tower Defense Prototipe - Strategy Game</li>
+                    <li class="project">Hi Forest - Platform Game</li>
+                    <li class="project">Desafio nas Alturas - Running Game</li>
+                    <li class="project">Zero Fight - Beat em up Game</li>
+                    <li class="project">Poke Turn - Simulação de turno</li>
+                    <li class="project">Cylian – Top Down Game</li>
+                    <li class="project">TouchRPG – Top Down</li>
+                </ul>
+        
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Formação Acadêmica</h2>
+            <hr>
+            <div class="section-content">
+                <div class="education">
+                    <h3>Pós-graduação em Game Designer</h3>
+                    <p>Unyleya</p>
+                </div>
+                <div class="education">
+                    <h3>Pós-graduação Sistema de Informação</h3>
+                    <p>Farese 2021</p>
+                </div>
+                <div class="education">
+                    <h3>MBA em Desenvolvimento Mobile</h3>
+                    <p>IGTI 2019</p>
+                </div>
+                <div class="education">
+                    <h3>Tecnologia superior em Jogos Digitais</h3>
+                    <p>FAESA 2016</p>
+                </div>
+                <div class="education">
+                    <h3>Administração de Empresas</h3>
+                    <p>Rede Doctum de Ensino 2015</p>
+                </div>
+                <div class="education">
+                    <h3>Programação de Computadores e Dispositivos Móveis</h3>
+                    <p>IFSP 201</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="languages">
+            <h2>Idiomas</h2>
+            <hr>
+            <ul class="languages">
+                <li>Espanhol: Avançado</li>
+                <li>Inglês: Básico</li>
+            </ul>
+        </section>
+        
+        <a class="back-link" href="index.html">&larr; Voltar ao início</a>
+
+    </div>
+
+</body>
+</html>

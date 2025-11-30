@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Tulio Lopes Rodrigues - Portfolio Online</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Press+Start+2P" rel="stylesheet">
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #007bff;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #007bff;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #007bff;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            font-size: 1.3em;
+        }
+        h3 {
+            color: #555;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+            margin-top: 15px;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 10px 0;
+        }
+        p {
+            margin: 5px 0 10px 0;
+        }
+        
+        /* Estilos da Capa/Perfil */
+        .capa {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #f9f9f9;
+        }
+        .profile-pic img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #007bff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+        .profile-title h1 {
+            color: #333; /* Cor mais neutra para o nome na capa */
+            font-size: 2em;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+        }
+        .profile-title h1 span {
+            color: #007bff;
+            font-family: 'Press Start 2P', cursive;
+        }
+        .profile-title h2 {
+            font-size: 1.2em;
+            color: #555;
+            margin-top: 5px;
+            border: none;
+            padding-bottom: 0;
+        }
+        
+        /* Estilos de navegação */
+        #navigation {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        #navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+        #navigation li {
+            display: inline;
+            margin: 0 15px;
+        }
+        #navigation a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navigation" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Trabalhos</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        
+        <div class="capa">
+            <div class="profile-pic">
+                <img src="img/tulio.jpg" alt="Foto de Tulio Lopes">
+            </div>
+
+            <div class="profile-title">
+                <h1><span>Tulio Lopes Rodrigues</span></h1>
+                <h2>Game Designer & Desenvolvedor Full-Stack</h2>
+            </div>
+        </div>
+        
+        <hr>
+
+        <section id="profile-summary">
+            <h2>Bem-vindo! | Perfil Profissional</h2>
+            <div class="section-content">
+                <p>Sou um profissional visionário e multifacetado com formação em Tecnologia de Jogos Digitais e Administração, combinando 7 anos de experiência direta em Game Design com sólida expertise em Programação (C#, C++, Java, JavaScript, KPython) e Desenvolvimento Web/Mobile.</p>
+                <p>Minha paixão está em transitar fluentemente entre a concepção criativa (design de sistemas, Level Design, UX/UI) e a implementação técnica (Unity, Unreal, Codificação), sempre aplicando uma visão estratégica do mercado para entregar projetos inovadores e de alta qualidade.</p>
+            </div>
+        </section>
+
+        <section id="links">
+            <h2>Acesse Outras Seções</h2>
+            <ul>
+                <li>Veja meus Trabalhos e Projetos em: <a href="portfolio.html">Trabalhos</a></li>
+                <li>Conheça minha Trajetória e Formação em: <a href="curriculo.html">Currículo</a></li>
+                <li>Entre em Contato comigo: <a href="contato.html">Contato</a></li>
+            </ul>
+        </section>
+
+    </div>
+
+</body>
+</html>

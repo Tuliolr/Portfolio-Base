@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Jogos Game Designer - Dommy, The Thief</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Press+Start+2P" rel="stylesheet">
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.5em;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #007bff;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #555;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            font-size: 1.3em;
+        }
+        h3 {
+             color: #007bff;
+             margin-top: 20px;
+             font-size: 1.1em;
+        }
+        p {
+            margin: 10px 0;
+            text-align: justify;
+        }
+        ul.tech-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul.tech-list li {
+            background: #e9ecef;
+            padding: 5px 10px;
+            border-left: 3px solid #007bff;
+            margin-bottom: 5px;
+            border-radius: 4px;
+        }
+        
+        /* Estilos de Navegação e Caminho - Mantidos */
+        #navigation {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        #navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+        #navigation li {
+            display: inline;
+            margin: 0 15px;
+        }
+        #navigation a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .caminho {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            font-size: 0.8em;
+            color: #777;
+        }
+        .caminho li {
+            display: inline;
+        }
+        .caminho a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* Estilos Específicos do Projeto - Mantidos */
+        .foto-trabalhos {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 30px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="navigation" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Trabalhos</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+        </ul>
+    </div>
+
+    <div class="container"> 
+        
+        <ul class="caminho">
+            <li><a href="index.html">Home</a></li>
+            <li>></li>
+            <li><a href="portfolio.html">Trabalhos</a></li>
+            <li>></li>
+            <li>Dommy, The Thief</li>
+        </ul>
+
+        <h1>Dommy, The Thief</h1>
+
+        <img class="foto-trabalhos" src="img/trabalhos/d1.png" alt="Jogo Dommy, The Thief">
+
+        <h2>Sumário do Projeto e Mecânicas</h2>
+
+        <p>"Dommy, the Thief" é um projeto de Running Game 2D para a plataforma Web, desenvolvido com foco em jogabilidade single-player. O jogo apresenta uma narrativa cômica e fantasiosa, onde o jogador assume o papel de Dommy, um goblin ladrão, no meio de um conflito entre os reinos de Orcs e Humanos.</p>
+
+        <p>A principal **mecânica de progressão** é baseada em *High Score*: o objetivo é otimizar a rota para coletar a maior quantidade de moedas e sobreviver aos obstáculos, maximizando a distância percorrida. Este design simples foca na rejogabilidade (replayability) e na curva de dificuldade crescente.</p>
+
+        <h2>Contribuição e Escopo Técnico</h2>
+        
+        <p>Como parte da equipe de Game Designers, participei ativamente do Design de Sistemas, balanceamento de desafios (obstáculos) e definição da experiência de jogo (jogabilidade e história).</p>
+
+        <p>O projeto foi concluído em 6 meses por uma equipe multidisciplinar (2 Game Designers, 2 Artistas e 2 Programadores). O design técnico incluiu:</p>
+
+        <h3>Plataforma e Ferramentas</h3>
+        <ul class="tech-list">
+            <li>Engine: Construct 3</li>
+            <li>Linguagens de Programação: JavaScript (nativo do Construct) e C++ (suporte).</li>
+            <li>Gráficos: Desenvolvidos em 2D.</li>
+            <li>Banco de Dados: Banco de dados local criptografado, focado na segurança de dados de pontuação.</li>
+            <li>Ferramentas de Arte/Áudio: Photoshop, Illustrator, Audacity, Paint Tool SAI.</li>
+        </ul>
+
+        <img class="foto-trabalhos" src="img/trabalhos/d2.png" alt="Cena do jogo Dommy, The Thief">
+
+        <br>
+        <a class="back-link" href="portfolio.html">&larr; Voltar ao Portfolio</a>
+
+    </div>
+
+</body>
+</html>
