@@ -10,11 +10,12 @@
     <script type="text/javascript" src="js/scripts.js"></script>
 
     <style>
+        /* Cores do Zombie Craft aplicadas: Destaque principal em #007bff (Azul Elétrico) */
         body {
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
             margin: 0;
-            background-color: #f4f4f9;
+            background-color: #f4f4f9; /* Fundo Suave */
             color: #333;
         }
         .container {
@@ -26,7 +27,7 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
         h1 {
-            color: #007bff;
+            color: #007bff; /* Título principal em Azul Elétrico */
             font-family: 'Press Start 2P', cursive;
             font-size: 1.5em;
             padding-bottom: 10px;
@@ -39,6 +40,11 @@
             padding-bottom: 5px;
             margin-top: 25px;
             font-size: 1.3em;
+        }
+        h3 {
+            color: #007bff; /* Subtítulos em Azul Elétrico */
+            margin-top: 20px;
+            font-size: 1.1em;
         }
         p {
             margin: 10px 0;
@@ -78,7 +84,7 @@
             display: inline;
         }
         .caminho a {
-            color: #007bff;
+            color: #007bff; /* Links do caminho em Azul Elétrico */
             text-decoration: none;
         }
 
@@ -94,13 +100,20 @@
         .back-link {
             display: block;
             margin-top: 30px;
-            color: #007bff;
+            color: #007bff; /* Link de volta em Azul Elétrico */
             text-decoration: none;
             font-weight: bold;
             text-align: center;
             font-size: 1.1em;
         }
-
+        /* Estilo para a citação (blockquote) - Mantém contraste */
+        blockquote {
+            background: #e9ecef; 
+            border-left: 5px solid #007bff; /* Borda em Azul Elétrico */
+            margin: 1.5em 0;
+            padding: 0.5em 10px;
+            quotes: "\201C""\201D""\2018""\2019";
+        }
     </style>
 </head>
 
@@ -130,16 +143,91 @@
 
         <img class="foto-trabalhos" src="img/trabalhos/m1.png" alt="Jogo Metal Armaggedon">
 
-        <h2>Descrição do Jogo</h2>
+        <h2>Sumário do Projeto e Mecânicas</h2>
 
-        <p>"Metal Armaggedon" é um jogo de Card Game cooperativo estilo RPG no qual podem jogar de 3 a 5 jogadores, com uma temática baseada no estilo de música "Metal".</p>
+<section> 
+  <h2>Game Design Document: Metal Armagedon 🤘🔥</h2> 
+  <p><strong>Visão Geral do Projeto (Elevator Pitch):</strong></p> 
+  <p> 
+    "Metal Armagedon" é um Card Game Cooperativo estilo RPG para 3 a 5 jogadores, onde o poder da música Metal é a única esperança. Os jogadores formam uma banda para viajar por áreas temáticas de estilos musicais rivais (Sertanejo, Samba, Funk, etc.), convertendo seus fãs em Adoradores do Rock através de competições épicas e derrotando os Dragões Deuses de cada gênero. O jogo é focado na colaboração estratégica e na progressão de personagem baseada em classes e cartas. 
+  </p> 
+  <hr> 
+  <h3>1. Gênero, Tema e Equipe 🎵🤝</h3> 
+  <ul> 
+    <li>Gênero Principal: Card Game Cooperativo / RPG de Mesa (Tabletop RPG Hybrid).</li> 
+    <li>Jogadores: 3 a 5 jogadores.</li> 
+    <li>Tema Central: Música Metal / Conflito de Estilos Musicais.</li> 
+    <li>Objetivo: Cooperar para converter fãs de outros estilos em Adoradores do Rock e derrotar o Chefe Final, salvando o mundo do "Apocalipse Musical".</li> 
+    <li>Desenvolvimento: Projeto de 4 meses, com equipe de 2 Game Designers, 2 Programadores e 1 Artista.</li> 
+  </ul> 
+  <hr> 
+  <h3>2. Core Loop (Loop Principal) e Fluxo de Jogo 🎸🎲</h3> 
+  <p> O Core Loop se baseia na progressão tática através do mapa, garantindo que o espírito cooperativo seja essencial em cada turno. </p> 
+  <blockquote cite="Game Designer Senior"> 
+    ESCOLHER CLASSE > PROGRESSÃO NO MAPA > COMPETIÇÃO DE BANDAS (COMBATE) > COLETAR RECOMPENSAS (CARTAS/ADORADORES) > ENFRENTAR DRAGÃO DEUS > CHEFE FINAL. </blockquote> 
+  <hr> 
+  <h3>3. Mecânicas de Jogo (Gameplay Mechanics) 🃏🥁</h3>
 
-        <p>O jogo é cooperativo, com o intuito de explorar o estilo de música metal, com o objetivo de levar cada jogador à colaboração e divertimento para derrotar outros estilos de música e salvar o mundo.</p>
+  <h4>3.1. Sistema de Classes e Personagens</h4> 
+  <ul> 
+    <li>Classes: Cada jogador inicia com uma carta representando sua classe: Baterista, Vocalista, Guitarrista ou Baixista. 
+      <ul> 
+        <li>Cada carta de classe possui Status Base (e.g., Ataque, Defesa, Saúde), Habilidades Especiais Únicas (alinhadas ao papel do instrumento) e um breve Resumo de História (Lore) do personagem.</li> 
+        <li>Balanceamento de Classe: O design deve garantir que a combinação das habilidades das classes seja sinérgica, forçando a dependência mútua (e.g., Baterista foca em ritmo/suporte, Guitarrista em dano de solo).</li> 
+      </ul> 
+    </li> 
+    <li>Progressão por Cartas Auxiliares: Jogadores ganham Cartas Auxiliares (como equipamentos, riffs ou power-ups) ao derrotar inimigos. Estas cartas permitem customização e aumento de poder ao longo do jogo, caracterizando a progressão RPG.</li> 
+  </ul>
 
-        <p>O projeto teve uma duração de 4 meses, onde trabalhamos com uma equipe de 2 game designer, 2 programadores e 1 artista. Trabalhamos na mecânica do jogo, jogabilidade, história e balanceamento de classe.</p>
+  <h4>3.2. Combate e Dano</h4> 
+  <ul> 
+    <li>Turnos: O combate é feito por turnos, onde cada jogador age em sequência.</li> 
+    <li>Dano e Testes: O dano dos jogadores e a resolução de ações são baseados em rolagens de Dados, injetando o elemento de sorte e imprevisibilidade comum aos RPGs de mesa.</li> 
+    <li>Inimigos: Inimigos são representados por outros estilos musicais e seus fãs.</li> 
+  </ul>
 
-        <img class="foto-trabalhos" src="img/trabalhos/m2.png" alt="Detalhe do jogo Metal Armaggedon">
+  <h4>3.3. Condição de Vitória e Derrota</h4> 
+  <ul> 
+    <li>Condição de Vitória: Derrotar o Chefe Final no mapa principal, após converter fãs nos mapas secundários.</li> 
+    <li>Condição de Derrota: O jogo termina imediatamente se: 
+      <ul> 
+        <li>Todos os jogadores morrerem. </li> 
+        <li>A Barra de Pontos de Adoradores do Rock** cair para o negativo (indicando que a popularidade do Metal foi superada pelos estilos rivais).</li> 
+      </ul> 
+    </li> 
+  </ul> 
+  <hr> 
+  <h3>4. Level Design e Progressão de Mapa 🗺️🎤</h3> 
+  <p> O mapa do jogo é dividido em áreas temáticas que servem como "dungeons" musicais. </p> 
+  <ul> 
+    <li>Áreas Temáticas: O mapa constitui áreas representando estilos musicais rivais: Sertanejo, Samba, Forró, MPB, Rap e Funk.</li> 
+    <li>Mecânica de Conversão: Em cada área, a banda participa de uma "Competição de Bandas" (o combate principal), visando converter os fãs locais. 
+      <ul> 
+        <li>A vitória no combate resulta em um aumento na Barra de Adoradores do Rock.</li> 
+        <li>Cada área vencida libera o caminho para o **Mapa Principal**.</li> 
+      </ul> 
+    </li> 
+    <li>Chefes de Área (Dragões Deuses): No final de cada área, o desafio culmina no confronto com o Dragão Deus daquele estilo musical (e.g., O Dragão Deus do Samba). 
+      <ul> 
+        <li>Derrotar o Dragão Deus é crucial para a progressão e para consolidar os Adoradores ganhos.</li> 
+      </ul> 
+    </li> 
+    <li>Chefe Final: O último mapa é liberado após a exploração das áreas secundárias. O Chefe Final deve incorporar os elementos de combate de todos os estilos de música derrotados, criando um desafio de balanço de habilidades de alto nível.</li> 
+  </ul> 
+  <hr> 
+  <h3>5. Balanço (Balancing) e Experiência de Jogo ⚖️⭐</h3> 
+  <p> O balanço deste projeto exige atenção especial devido à natureza cooperativa e o sistema de classes. </p> 
+  <ul> 
+    <li>Balanceamento de Classe: Garantir que cada classe (Baterista, Vocalista, Guitarrista, Baixista) seja indispensável, sem uma "classe favorita" que carregue o jogo. O sucesso deve depender da execução das sinergias entre as habilidades.</li> 
+    <li>Curva de Dificuldade: Os Dragões Deuses devem escalar em dificuldade, forçando os jogadores a utilizarem as Cartas Auxiliares e a coordenação de equipe.</li> 
+    <li>Conexão Temática: O sucesso do jogo reside na forte conexão entre as mecânicas (combate, classes, progressão) e o tema Metal/Musical, tornando a experiência única e memorável.</li> 
+  </ul>
+</section>
 
+<img class="foto-trabalhos" src="img/trabalhos/m2.png" alt="Detalhe do jogo Metal Armaggedon">
+
+
+        
         <br>
         <a class="back-link" href="portfolio.html">&larr; Voltar ao Portfolio</a>
 
