@@ -4,121 +4,45 @@
     <title>Currículo - Tulio Lopes - Game Designer</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Press+Start+2P" rel="stylesheet">
-    <style>
-        /* CSS Integrado para garantir que o estilo seja aplicado */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            background-color: #f4f4f9;
-            color: #333;
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/styles.css">
+    
+
+
+    <script>
+        // Função do Menu Responsivo
+        function openNav() {
+            var x = document.getElementById("navigation");
+            if (x.className === "navigation") {
+                x.className += " responsive";
+            } else {
+                x.className = "navigation";
+            }
         }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-        header {
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #007bff;
-            margin-bottom: 20px;
-        }
-        header h1 {
-            color: #007bff;
-            font-family: 'Press Start 2P', cursive;
-            font-size: 1.5em;
-            margin-bottom: 5px;
-        }
-        h2 {
-            color: #007bff;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
-            margin-top: 25px;
-            font-size: 1.3em;
-        }
-        h3 {
-            color: #555;
-            margin-bottom: 5px;
-            font-size: 1.1em;
-            margin-top: 15px;
-        }
-        hr {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 10px 0;
-        }
-        p {
-            margin: 5px 0 10px 0;
-        }
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-            padding: 0;
-        }
-        .skills li, .project {
-            margin-bottom: 8px;
-        }
-        .experience, .education {
-            margin-bottom: 15px;
-            padding-left: 10px;
-            border-left: 3px solid #ccc;
-        }
-        .experience p, .education p {
-            margin: 0;
-            font-size: 0.9em;
-        }
-        .languages li {
-            font-weight: bold;
-        }
-        /* Estilos de navegação (não serão funcionais sem o CSS e JS externos, mas mantive a estrutura) */
-        #navigation {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        #navigation ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: inline-block;
-        }
-        #navigation li {
-            display: inline;
-            margin: 0 15px;
-        }
-        #navigation a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .caminho {
-            list-style-type: none;
-            padding: 10px 0;
-            margin: 0;
-            font-size: 0.8em;
-            color: #777;
-        }
-        .caminho li {
-            display: inline;
-        }
-        .caminho a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .back-link {
-            display: block;
-            margin-top: 20px;
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+
+        // Função de Efeito de Digitação
+        document.addEventListener('DOMContentLoaded', function() {
+            const profession = "Game Designer & Desenvolvedor Full-Stack";
+            const typedTextElement = document.getElementById('typed-text');
+            let i = 0;
+            let speed = 75; // Velocidade de digitação (ms)
+
+            function typeWriter() {
+                if (i < profession.length) {
+                    typedTextElement.innerHTML += profession.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                } else {
+                    // Adiciona o cursor piscando após o texto completo
+                    typedTextElement.innerHTML += '<span styles="color: var(--cor-acento); border-bottom: none; margin-top: 0" class="blinking-cursor">|</span>';
+                }
+            }
+
+            // Limpa o conteúdo inicial e inicia a digitação
+            typedTextElement.innerHTML = ''; 
+            typeWriter();
+        });
+    </script>
 </head>
 
 <body>
@@ -129,7 +53,7 @@
             <li><a href="portfolio.html">Trabalhos</a></li>
             <li><a href="curriculo.html">Currículo</a></li>
             <li><a href="contato.html">Contato</a></li>
-            <li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+           
         </ul>
     </div>
 
@@ -137,13 +61,12 @@
         
         <ul class="caminho">
             <li><a href="index.html">Home</a></li>
-            <li>></li>
             <li>Currículo</li>
         </ul>
 
         <header>
             <h1>Tulio Lopes Rodrigues</h1>
-            <p>Game Designer & Desenvolvedor Full-Stack</p>
+            <p id="typed-text"></p>
         </header>
 
         <section id="personal-data">
@@ -170,11 +93,11 @@
             <h2>Competências Chave</h2>
             <hr>
             <ul class="skills">
-                <li>Design & Criação: Facilidade para transitar entre áreas técnicas e criativas (ideais, roteiros, script, peças conceituais). Aptidão para escrita técnica e criativa através de protótipos e descrições textuais/visuais.</li>
-                <li>Desenvolvimento & Engine: Domínio sobre diversos softwares de desenvolvimento de games e aplicações digitais, incluindo Unity, Unreal, Constructor 3D e Game Maker.</li>
-                <li>Linguagens de Programação: C#, C++, Java, Java Script, Python</li>
-                <li>Gestão de Projeto & Game Design: Gerenciamento de ideias, prototipagem, testes de mecânicas, desenho de sistemas, Level Design, balanceamento, System Economy. Experiência com Metodologia Ágil: Kanban, Scrum, Notion, Excel e plataforma Jira.</li>
-                <li>Gráfico & UX/UI: Domínio de softwares gráficos (Photoshop, Figma, After Effects, Blender, Maya). Experiência com Designer, SEO, UI, UX e Webpack.</li>
+                <li><strong>Design & Criação:</strong> Facilidade para transitar entre áreas técnicas e criativas (ideais, roteiros, script, peças conceituais). Aptidão para escrita técnica e criativa através de protótipos e descrições textuais/visuais.</li>
+                <li><strong>Desenvolvimento & Engine:</strong> Domínio sobre diversos softwares de desenvolvimento de games e aplicações digitais, incluindo Unity, Unreal, Constructor 3D e Game Maker.</li>
+                <li><strong>Linguagens de Programação:</strong> C#, C++, Java, Java Script, Python</li>
+                <li><strong>Gestão de Projeto & Game Design:</strong> Gerenciamento de ideias, prototipagem, testes de mecânicas, desenho de sistemas, Level Design, balanceamento, System Economy. Experiência com Metodologia Ágil: Kanban, Scrum, Notion, Excel e plataforma Jira.</li>
+                <li><strong>Gráfico & UX/UI:</strong> Domínio de softwares gráficos (Photoshop, Figma, After Effects, Blender, Maya). Experiência com Designer, SEO, UI, UX e Webpack.</li>
             </ul>
         </section>
         
@@ -186,7 +109,7 @@
             <p>Unity / Unreal / Construct/ Game Maker</p>
             
             <h3>Desenvolvimento Web e Programação</h3>
-            <p>HTML / CSS / JavaScript / C# / PHP / JAVA / Python / NodeJS / </p>
+            <p>HTML / CSS / JavaScript / C# / JAVA / Python / NodeJS / </p>
             
             <h3>Frameworks</h3>
             <p>Angular / ReactJS / VueJS</p>
@@ -268,7 +191,7 @@
                     <li class="project">Cylian – Top Down Game</li>
                     <li class="project">TouchRPG – Top Down</li>
                 </ul>
-        
+            
             </div>
         </section>
 
@@ -312,7 +235,10 @@
             </ul>
         </section>
         
-        <a class="back-link" href="index.html">&larr; Voltar ao início</a>
+        <div class="button-center">
+            <a class="action-button" href="index.html">Voltar ao Início</a>
+        </div>
+
 
     </div>
 

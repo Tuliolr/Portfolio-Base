@@ -5,119 +5,23 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Press+Start+2P" rel="stylesheet">
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <script>
+        // Função para alternar o menu de navegação em telas pequenas
+        function openNav() {
+            var x = document.getElementById("navigation");
+            // Se a barra de navegação tem a classe 'navigation' (estado inicial), adiciona 'responsive'
+            if (x.className === "navigation") {
+                x.className += " responsive";
+            } else {
+                // Caso contrário, remove 'responsive', voltando ao estado inicial
+                x.className = "navigation";
+            }
+        }
+    </script>
 
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #007bff;
-            font-family: 'Press Start 2P', cursive;
-            font-size: 1.5em;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #007bff;
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #555;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-            margin-top: 25px;
-            font-size: 1.3em;
-        }
-        h3 {
-             color: #007bff;
-             margin-top: 20px;
-             font-size: 1.1em;
-        }
-        p {
-            margin: 10px 0;
-            text-align: justify;
-        }
-        ul.tech-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul.tech-list li {
-            background: #e9ecef;
-            padding: 5px 10px;
-            border-left: 3px solid #007bff;
-            margin-bottom: 5px;
-            border-radius: 4px;
-        }
-        
-        /* Estilos de Navegação e Caminho - Mantidos */
-        #navigation {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        #navigation ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: inline-block;
-        }
-        #navigation li {
-            display: inline;
-            margin: 0 15px;
-        }
-        #navigation a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .caminho {
-            list-style-type: none;
-            padding: 0;
-            margin: 0 0 20px 0;
-            font-size: 0.8em;
-            color: #777;
-        }
-        .caminho li {
-            display: inline;
-        }
-        .caminho a {
-            color: #007bff;
-            text-decoration: none;
-        }
 
-        /* Estilos Específicos do Projeto - Mantidos */
-        .foto-trabalhos {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin: 20px 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        }
-
-        .back-link {
-            display: block;
-            margin-top: 30px;
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-            text-align: center;
-            font-size: 1.1em;
-        }
-
-    </style>
 </head>
 
 <body>
@@ -128,7 +32,7 @@
             <li><a href="portfolio.html">Trabalhos</a></li>
             <li><a href="curriculo.html">Currículo</a></li>
             <li><a href="contato.html">Contato</a></li>
-            <li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+            
         </ul>
     </div>
 
@@ -136,9 +40,9 @@
         
         <ul class="caminho">
             <li><a href="index.html">Home</a></li>
-            <li>></li>
+            
             <li><a href="portfolio.html">Trabalhos</a></li>
-            <li>></li>
+           
             <li>Dommy, The Thief</li>
         </ul>
 
@@ -148,12 +52,102 @@
 
         <h2>Sumário do Projeto e Mecânicas</h2>
 
-       <section> <h2> Documento de Design de Jogo: Dommy, The Thief 💰🏃</h2> <p><strong>Visão Geral do Projeto (Elevator Pitch):</strong></p> <p> Um Running Game 2D clássico, desenvolvido para a Web, que injeta humor e fantasia na fórmula atemporal de arcade. O jogador controla Dommy, um goblin ladrão, cujo objetivo é sobreviver em um loop infinito de obstáculos enquanto maximiza a coleta de moedas, estabelecendo um foco claro em otimização de rota e alta pontuação (High Score) . </p> <hr> <h3> 1. Gênero, Tema e Plataforma </h3> <ul> <li><strong>Gênero Principal:</strong> Running Game 2D (Endless Runner).</li> <li><strong>Perspectiva:</strong> Side-Scroller 2D.</li> <li><strong>Estética/Tema:</strong> Fantasia Cômica, centrada no conflito entre Orcs e Humanos, com o protagonista (Dommy) sendo um ladrão oportunista.</li> <li><strong>Plataforma de lançamento:</strong> Web (Single-Player).</li> <li><strong>Engine Principal:</strong> Construct 3 – Uma escolha inteligente para prototipagem rápida e implantação Web-first .</li> </ul> <hr> <h3> 2. Core Loop (Loop Principal) </h3> <p> O Core Loop é perfeitamente simples e adequado com o gênero Endless Corredor : </p> <blockquote cite="Game Designer Sênior"> CORRER E DESVIAR > COLETAR RECURSOS > OTIMIZAR ROTA > ESTABELECER HIGH SCORE. </blockquote> <hr> <h3> 3. Mecânicas de Jogo </h3> <ul> <li> Protagonista (Dommy): <ul> <li>O personagem principal, Dommy, deve ter movimentos básicos (salto, deslize ou ataque) que servem para navegar e desviar dos obstáculos. O controle precisa ser preciso e responsivo.</li> <li>O design deve transmitir a personalidade cômica do ladrão goblin através das animações.</li> </ul> </li> <li> Progressão e High Score: <ul> <li>O objetivo central é a classificação , determinada pela Distância Percorrida (Tempo de Sobrevivência) e pela Quantidade de Moedas Coletadas .</li> <li>O Level Design foca em apresentar rotas que permitem a otimização da coleta de moedas (eg, uma moeda de coleta de moedas (eg, uma moeda de coleta de moedas) de alto valor em um caminho mais arriscado, ou várias moedas em um caminho mais seguro), introduzindo o elemento de Risco vs.Recompensa .</li> </ul> </li> <li> Obstáculos e Curva de Dificuldade: <ul> <li>A principal mecânica de desafio é a dificuldade crescente(Speed ​​Scaling e/ou Density Scaling).</li> <li>Os obstáculos (que podem ser elementos da guerra Orcs vs. Humanos) devem ser introduzidos gradualmente, aumentando em velocidade e complexidade de padrões à medida que o High Score do jogador avança.</li> </ul> </li> </ul> <hr> <h3> 4. Design de Sistemas e Balanceamento </h3> <p> A participação da equipe de Game Designers no Design de Sistemas e Balanceamento é fundamental para a longevidade do Endless Runner . </p> <ul> <li> Balanço de Desafios: <ul> <li>O design deve garantir que o aumento da dificuldade (velocidade e densidade de obstáculos) seja perfeitamente calibrado para que os fracassos sejam vistos como justos, incentivando a próxima tentativa.</li> <li>O ritmo deve ter micro-pausas (pequenoss trechos mais simples) para dar ao jogador tempo para reagir antes de introduzir um novo padrão de desafio.</li> </ul> </li> <li> Metas de Produção: <ul> <li>O prazo de 6 meses e a equipe técnica enxuta ( lean team ) de 6 pessoas reforçam a necessidade de manter o foco focado (Foco no High Score e mecânicas centrais).</li> <li>O uso do Banco de Dados Local Criptografado para classificação é uma atenção importante para garantir a integridade dos High Scores (anti-cheat básico).</li> </ul> </li> </ul> <hr> <h3> 5. Conclusão e Visão </h3> <p> "Dommy, o Ladrão" é um projeto de jogo de arcade focado e bem escolhido , utilizando a ferramenta Construct 3 para oferecer uma experiência de Endless Runner sólida, com ênfase na otimização de rota e na busca incessante pela pontuação máxima, embalada em uma narrativa leve e divertida. </p> </seção>
+        <section> 
+            <h2> Documento de Design de Jogo: Dommy, The Thief 💰🏃</h2> 
+            <p><strong>Visão Geral do Projeto (Elevator Pitch):</strong></p> 
+            <p> Um Running Game 2D clássico, desenvolvido para a Web, que injeta humor e fantasia na fórmula atemporal de arcade. O jogador controla Dommy, um goblin ladrão, cujo objetivo é sobreviver em um loop infinito de obstáculos enquanto maximiza a coleta de moedas, estabelecendo um foco claro em otimização de rota e alta pontuação (High Score). </p> 
+            <hr> 
+            
+            <h3> 1. Gênero, Tema e Plataforma </h3> 
+            <ul class="tech-list"> 
+                <li><strong>Gênero Principal:</strong> Running Game 2D (Endless Runner).</li> 
+                <li><strong>Perspectiva:</strong> Side-Scroller 2D.</li> 
+                <li><strong>Estética/Tema:</strong> Fantasia Cômica, centrada no conflito entre Orcs e Humanos, com o protagonista (Dommy) sendo um ladrão oportunista.</li> 
+                <li><strong>Plataforma de lançamento:</strong> Web (Single-Player).</li> 
+                <li><strong>Engine Principal:</strong> Construct 3 – Uma escolha inteligente para prototipagem rápida e implantação Web-first.</li> 
+            </ul> 
+            <hr> 
+            
+            <h3> 2. Core Loop (Loop Principal) </h3> 
+            <p> O Core Loop é perfeitamente simples e adequado com o gênero Endless Corredor : </p> 
+            <blockquote cite="Game Designer Sênior"> CORRER E DESVIAR > COLETAR RECURSOS > OTIMIZAR ROTA > ESTABELECER HIGH SCORE. </blockquote> 
+            <hr> 
+            
+            <h3> 3. Mecânicas de Jogo </h3> 
+            <ul> 
+                <li> Protagonista (Dommy): 
+                    <ul> 
+                        <li>O personagem principal, Dommy, deve ter movimentos básicos (salto, deslize ou ataque) que servem para navegar e desviar dos obstáculos. O controle precisa ser preciso e responsivo.</li> 
+                        <li>O design deve transmitir a personalidade cômica do ladrão goblin através das animações.</li> 
+                    </ul> 
+                </li> 
+                <li> Progressão e High Score: 
+                    <ul> 
+                        <li>O objetivo central é a classificação, determinada pela Distância Percorrida (Tempo de Sobrevivência) e pela Quantidade de Moedas Coletadas.</li> 
+                        <li>O Level Design foca em apresentar rotas que permitem a otimização da coleta de moedas (eg, uma moeda de alto valor em um caminho mais arriscado, ou várias moedas em um caminho mais seguro), introduzindo o elemento de Risco vs. Recompensa.</li> 
+                    </ul> 
+                </li> 
+                <li> Obstáculos e Curva de Dificuldade: 
+                    <ul> 
+                        <li>A principal mecânica de desafio é a dificuldade crescente (Speed ​​Scaling e/ou Density Scaling).</li> 
+                        <li>Os obstáculos (que podem ser elementos da guerra Orcs vs. Humanos) devem ser introduzidos gradualmente, aumentando em velocidade e complexidade de padrões à medida que o High Score do jogador avança.</li> 
+                    </ul> 
+                </li> 
+            </ul> 
+            <hr> 
+            
+            <h3> 4. Design de Sistemas e Balanceamento </h3> 
+            <p> A participação da equipe de Game Designers no Design de Sistemas e Balanceamento é fundamental para a longevidade do Endless Runner. </p> 
+            <ul> 
+                <li> Balanço de Desafios: 
+                    <ul> 
+                        <li>O design deve garantir que o aumento da dificuldade (velocidade e densidade de obstáculos) seja perfeitamente calibrado para que os fracassos sejam vistos como justos, incentivando a próxima tentativa.</li> 
+                        <li>O ritmo deve ter micro-pausas (pequenos trechos mais simples) para dar ao jogador tempo para reagir antes de introduzir um novo padrão de desafio.</li> 
+                    </ul> 
+                </li> 
+                <li> Metas de Produção: 
+                    <ul> 
+                        <li>O prazo de 6 meses e a equipe técnica enxuta (lean team) de 6 pessoas reforçam a necessidade de manter o foco focado (Foco no High Score e mecânicas centrais).</li> 
+                        <li>O uso do Banco de Dados Local Criptografado para classificação é uma atenção importante para garantir a integridade dos High Scores (anti-cheat básico).</li> 
+                    </ul> 
+                </li> 
+            </ul> 
+            <hr> 
+            
+            <h3> 5. Conclusão e Visão </h3> 
+            <p> "Dommy, o Ladrão" é um projeto de jogo de arcade focado e bem escolhido, utilizando a ferramenta Construct 3 para oferecer uma experiência de Endless Runner sólida, com ênfase na otimização de rota e na busca incessante pela pontuação máxima, embalada em uma narrativa leve e divertida. </p> 
+        </section>
 
         <img class="foto-trabalhos" src="img/trabalhos/d2.png" alt="Cena do jogo Dommy, The Thief">
+      
+        <h2>Análise do Concept Art</h2>
 
+<ul class="concept-list">
+    <li>
+        <strong>Raça/Tipo:</strong> Goblin
+        </li>
+    <li>
+        <strong>Estilo Visual:</strong> Estilo Cartoon 2D
+        </li>
+    <li>
+        <strong>Vestuário/Equipamento:</strong> Armadura de couro rasgada, trajes de ladrão medieval
+        </li>
+    <li>
+        <strong>Cores Predominantes:</strong> Verde, Roxo e Marrom
+        </li>
+    <li>
+        <strong>Acessórios Característicos:</strong> Adaga, Saco de moedas, Toca de ladão
+        </li>
+    <li>
+        <strong>Postura/Atitude:</strong> Medroso, furtivo, olhar astuto, comico, mesquinho
+        </li>
+</ul>
+ <img class="foto-trabalhos" src="img/trabalhos/concerptArtDommy.png" alt="Cena do jogo Dommy, The Thief">
         <br>
-        <a class="back-link" href="portfolio.html">&larr; Voltar ao Portfolio</a>
+       <div class="button-center">
+            <a class="action-button" href="index.html">Voltar ao Início</a>
+        </div>
+
 
     </div>
 

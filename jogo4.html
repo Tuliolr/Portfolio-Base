@@ -1,132 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <title>Jogos Game Designer - Dommy, The Thief</title>
+    <title>Jogos Game Designer - Zombie Craft</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Press+Start+2P" rel="stylesheet">
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <script>
+        // Função para alternar o menu de navegação em telas pequenas
+        function openNav() {
+            var x = document.getElementById("navigation");
+            // Se a barra de navegação tem a classe 'navigation' (estado inicial), adiciona 'responsive'
+            if (x.className === "navigation") {
+                x.className += " responsive";
+            } else {
+                // Caso contrário, remove 'responsive', voltando ao estado inicial
+                x.className = "navigation";
+            }
+        }
+    </script>
 
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #007bff;
-            font-family: 'Press Start 2P', cursive;
-            font-size: 1.5em;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #007bff;
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #555;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-            margin-top: 25px;
-            font-size: 1.3em;
-        }
-        h3 {
-             color: #007bff;
-             margin-top: 20px;
-             font-size: 1.1em;
-        }
-        p {
-            margin: 10px 0;
-            text-align: justify;
-        }
-        ul.tech-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul.tech-list li {
-            background: #e9ecef;
-            padding: 5px 10px;
-            border-left: 3px solid #007bff;
-            margin-bottom: 5px;
-            border-radius: 4px;
-        }
-        
-        /* Estilos de Navegação e Caminho - Mantidos */
-        #navigation {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        #navigation ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: inline-block;
-        }
-        #navigation li {
-            display: inline;
-            margin: 0 15px;
-        }
-        #navigation a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .caminho {
-            list-style-type: none;
-            padding: 0;
-            margin: 0 0 20px 0;
-            font-size: 0.8em;
-            color: #777;
-        }
-        .caminho li {
-            display: inline;
-        }
-        .caminho a {
-            color: #007bff;
-            text-decoration: none;
-        }
 
-        /* Estilos Específicos do Projeto - Mantidos */
-        .foto-trabalhos {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin: 20px 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        }
-
-        .back-link {
-            display: block;
-            margin-top: 30px;
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-            text-align: center;
-            font-size: 1.1em;
-        }
-
-        /* Estilos para os novos botões */ 
-        .button-group { text-align: center; margin-top: 30px; } 
-        .project-button { display: inline-block; padding: 12px 25px; margin: 0 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-family: 'Montserrat', sans-serif; transition: background-color 0.3s ease, transform 0.1s ease; font-size: 1em; } 
-        .itchio-button { background-color: #fa5b5b; color: white; border: 2px solid #fa5b5b; } 
-        .github-button { background-color: #24292e;  color: white; border: 2px solid #24292e; } 
-        .project-button:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); } 
-        .itchio-button:hover { background-color: #e04a4a; } 
-        .github-button:hover { background-color: #1b1f23; }
-
-    </style>
 </head>
 
 <body>
@@ -137,7 +32,7 @@
             <li><a href="portfolio.html">Trabalhos</a></li>
             <li><a href="curriculo.html">Currículo</a></li>
             <li><a href="contato.html">Contato</a></li>
-            <li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+            
         </ul>
     </div>
 
@@ -145,71 +40,101 @@
         
         <ul class="caminho">
             <li><a href="index.html">Home</a></li>
-            <li>></li>
+            
             <li><a href="portfolio.html">Trabalhos</a></li>
-            <li>></li>
+           
             <li>Zombie Craft</li>
         </ul>
 
         <h1>Zombie Craft</h1>
 
-        <img class="foto-trabalhos" src="img/trabalhos/capa.png" alt="Jogo Zombie Craft">
+        
+        <img class="foto-trabalhos" src="img/trabalhos/capa2.png" alt="Jogo Zombie Craft">
 
         <h2>Sumário do Projeto e Mecânicas</h2>
 
-        <section> <h2> Game Design Document: Zombie Craft 🧟‍♀️🎅</h2> 
+        <section> 
+            <h2> Game Design Document: Zombie Craft 🧟‍♀️🎅</h2> 
             <p><strong>Visão Geral do Projeto (Elevator Pitch):</strong></p> 
             <p> Um <strong>survivor-shooter apocalíptico</strong> em 3D com estilo gráfico voxel (semelhante ao Minecraft), focado na sobrevivência por tempo em um cenário hostil. O jogador assume o papel de uma Heroína enfrentando hordas de zumbis em um mapa delimitado, culminando em encontros intensos com um <strong>Chefe Natalino</strong> cíclico. O foco do design está na gestão de recursos (munição e vida), domínio de combate e navegação estratégica em rotas de dificuldade variada. </p> 
             <hr> 
+            
             <h3> 1. Gênero e Tema </h3> 
             <ul> 
-                <li><strong>Gênero Principal:</strong> Survival-Shooter (Horde Survival/Time-Based)</li> 
-                <li><strong>Perspectiva:</strong> Terceira Pessoa (Assumindo)</li> 
-                <li><strong>Estética/Tema:</strong> Apocalipse Zumbi com um toque inusitado de "Horror Festivo" (Chefe Noel).</li> 
-                <li><strong>Plataforma de Desenvolvimento:</strong> Unity.</li> 
-                <li><strong>Estilo de Arte:</strong> Low-Poly 3D/Voxel-like (Gráfico semelhante ao Minecraft) - O que confere um charme único e simplifica o pipeline de arte. </li> 
+                <li>Gênero Principal: Survival-Shooter (Horde Survival/Time-Based)</li> 
+                <li>Perspectiva: Terceira Pessoa (Assumindo)</li> 
+                <li>Estética/Tema: Apocalipse Zumbi com um toque inusitado de "Horror Festivo" (Chefe Noel).</li> 
+                <li>Plataforma de Desenvolvimento: Unity.</li> 
+                <li>Estilo de Arte: Low-Poly 3D/Voxel-like (Gráfico semelhante ao Minecraft) - O que confere um charme único e simplifica o pipeline de arte. </li> 
             </ul> 
             <hr> 
+            
             <h3> 2. Core Loop (Loop Principal) </h3> 
             <p> O Core Loop é simples, direto e focado em alta re-jogabilidade: </p> 
-            <blockquote cite="Game Designer"> SOBREVIVER > ELIMINAR HORDAS > GERENCIAR RECURSOS > ENFRENTAR CHEFE > REPETIR/QUEBRAR RECORDES. </blockquote> <hr> <h3> 3. Mecânicas de Jogo </h3> 
+            <blockquote cite="Game Designer"> SOBREVIVER > ELIMINAR HORDAS > GERENCIAR RECURSOS > ENFRENTAR CHEFE > REPETIR/QUEBRAR RECORDES. </blockquote> 
+            <hr> 
+            
+            <h3> 3. Mecânicas de Jogo </h3> 
             <ul> 
-            <li> Controle e Combate: 
-                <ul> 
-                    <li>A heroína utiliza uma arma de fogo para eliminar os zumbis. O combate deve ser responsivo e esmagador, com feedback visual e sonoro impactante (por exemplo, marcadores de acerto e animações de morte) . passa, a <strong>taxa de spawn e/ou a dificuldade dos zumbis aumenta</strong> progressivamente ( Scaling Difficulty ).</li> 
-                    <li><strong>Recursos (Drops):</strong> Zumbis normais têm uma chance (RNG) de dropar Kits de Primeiros Socorros (HP) ao serem excluídos. Este elemento de sorte é crucial para o balanço de risco/recompensa.</li> 
-                </ul> </li> 
+                <li> Controle e Combate: 
+                    <ul> 
+                        <li>A heroína utiliza uma arma de fogo para eliminar os zumbis. O combate deve ser responsivo e esmagador, com feedback visual e sonoro impactante (por exemplo, marcadores de acerto e animações de morte). A medida que o tempo passa, a taxa de spawn e/ou a dificuldade dos zumbis aumenta progressivamente (Scaling Difficulty).</li> 
+                        <li>Recursos (Drops):** Zumbis normais têm uma chance (**RNG**) de dropar Kits de Primeiros Socorros (HP) ao serem excluídos. Este elemento de sorte é crucial para o balanço de risco/recompensa.</li> 
+                    </ul> 
+                </li> 
                 <li> Encontro com Chefes: 
-                    <ul> <li><strong>O Chefe:</strong> O Papai Noel Enorme (Giant Santa Boss)aparece em intervalos de tempo fixos, especificamente como um marco de dificuldade.</li> 
-                        <li><strong>Mecânica do Chefe:</strong> Ele possui uma Barra de Vida dedicada e é significativamente mais difícil de derrota. Seu comportamento é previsível: ele nasce no mapa e vai diretamente na direção ao jogador ( Aggro ) , forçando o movimento e a interrupção da rotina de cultivo do jogador.</li> 
-                    </ul> </li> </ul> 
-                    <hr> 
-                    <h3> 4. Level Design e Risco/Recompensa </h3> 
-                    <p> O Level Design foi inteligentemente construído para promover a escolha estratégica e a gestão de risco (como um fork de dificuldade). </p> 
                     <ul> 
-                        <li> Rotas de Dificuldade ( Pathing Strategy ): <ul> 
-                        <li>O mapa obriga o jogador a escolher entre 2 a 3 caminhos distintos .</li> 
+                        <li>O Chefe: O Papai Noel Enorme (Giant Santa Boss) aparece em intervalos de tempo fixos, especificamente como um marco de dificuldade.</li> 
+                        <li>Mecânica do Chefe: Ele possui uma Barra de Vida dedicada e é significativamente mais difícil de derrotar. Seu comportamento é previsível: ele nasce no mapa e vai diretamente na direção ao jogador (*Aggro*), forçando o movimento e a interrupção da rotina de cultivo do jogador.</li> 
+                    </ul> 
+                </li> 
+            </ul> 
+            <hr> 
+            
+            <h3> 4. Level Design e Risco/Recompensa </h3> 
+            <p> O Level Design foi inteligentemente construído para promover a escolha estratégica e a gestão de risco (como um fork de dificuldade). </p> 
+            <ul> 
+                <li> Rotas de Dificuldade (*Pathing Strategy*): 
+                    <ul> 
+                        <li>O mapa obriga o jogador a escolher entre 2 a 3 caminhos distintos.</li> 
                         <li>Cada caminho deve ter uma dificuldade e/ou recompensa (por exemplo, um caminho mais aberto/fácil de lutar com menos recursos, e um caminho mais estreito/difícil de navegar com spawns ou drops de munição mais frequentes).</li> 
-                        <li>A navegação entre essas rotas é a chave para o <strong>sucesso de longo prazo e recorde de tempo</strong>.</li> 
-                    </ul> </li> </ul> 
-                    <hr> 
-                    <h3> 5. Balanço (Balancing) e Métricas-Chave </h3> 
-                    <p> O balanço será crucial, visto que o jogo é baseado em tempo. </p> 
+                        <li>A navegação entre essas rotas é a chave para o sucesso de longo prazo e recorde de tempo.</li> 
+                    </ul> 
+                </li> 
+            </ul> 
+            <hr> 
+            
+            <h3> 5. Balanço (Balancing) e Métricas-Chave </h3> 
+            <p> O balanço será crucial, visto que o jogo é baseado em tempo. </p> 
+            <ul> 
+                <li> Métricas de Sobrevivência (KPIs): 
                     <ul> 
-                        <li> Métricas de Sobrevivência (KPIs): <ul> 
-                        <li><strong>Dano de Zumbis:</strong> Calibrado para que o Kit de Primeiros Socorros seja significativo, mas não onipresente.</li>
-                        <li><strong>Frequência de Drop de Kit: Uma chance ( porcentagem de RNG ) deve ser ajustada para gerar tensão, mas recompensar a eliminação de grandes hordas (por exemplo, 5-10% de chance).</li> 
-                        <li><strong>Ciclo do Chefe: O tempo entre os spawns do Chefe deve ser longo o suficiente para o jogador se recuperar do combate anterior, mas curto o suficiente para manter a pressão alta.</li> 
-                        </ul> </li> </ul> 
-                        <p> O projeto é um excelente exemplo de como a simplicidade das mecânicas e a complexidade das escolhas de Level Design se unem para criar uma experiência de Horde Survival viciante. Parabéns pela iniciativa fazer todo o desenvolvimento técnico! </p> 
-                        <div class="button-group"> <a href="https://gueteway.itch.io/zombie-craft" target="_blank" class="project-button itchio-button"> 🎮 JOGAR AGORA (Itch.io) </a> <a href="https://github.com/Tuliolr/ZumbisUnity" target="_blank" class="project-button github-button"> 💻 VER CÓDIGO (GitHub) </a> </div>
-                    </seção>
+                        <li>Dano de Zumbis: Calibrado para que o Kit de Primeiros Socorros seja significativo, mas não onipresente.</li>
+                        <li>Frequência de Drop de Kit: Uma chance (porcentagem de RNG) deve ser ajustada para gerar tensão, mas recompensar a eliminação de grandes hordas (por exemplo, 5-10% de chance).</li> 
+                        <li>Ciclo do Chefe: O tempo entre os spawns do Chefe deve ser longo o suficiente para o jogador se recuperar do combate anterior, mas curto o suficiente para manter a pressão alta.</li> 
+                        <li>Ciclo do Chefe: O tempo entre os spawns do Chefe deve ser longo o suficiente para o jogador se recuperar do combate anterior, mas curto o suficiente para manter a pressão alta.</li> 
+                    </ul> 
+                </li> 
+            </ul> 
+            <p> O projeto é um excelente exemplo de como a simplicidade das mecânicas e a complexidade das escolhas de Level Design se unem para criar uma experiência de *orde Survival viciante. Parabéns pela iniciativa fazer todo o desenvolvimento técnico! </p> 
+            
+            <div class="button-group"> 
+                <a href="https://gueteway.itch.io/zombie-craft" target="_blank" class="project-button itchio-button"> 🎮 JOGAR AGORA (Itch.io) </a> 
+                <a href="https://github.com/Tuliolr/ZumbisUnity" target="_blank" class="project-button github-button"> 💻 VER CÓDIGO (GitHub) </a> 
+            </div>
+        </section>
 
-        <img class="foto-trabalhos" src="img/trabalhos/img2.png" alt="Cena do jogo Dommy, The Thief">
-        <img class="foto-trabalhos" src="img/trabalhos/img3.png" alt="Cena do jogo Dommy, The Thief">
+        
+        <img class="foto-trabalhos" src="img/trabalhos/img2.png" alt="Cena do jogo Zombie Craft">
+        
+        
+        <img class="foto-trabalhos" src="img/trabalhos/img3.png" alt="Cena do jogo Zombie Craft">
 
         <br>
-        <a class="back-link" href="portfolio.html">&larr; Voltar ao Portfolio</a>
+        <div class="button-center">
+            <a class="action-button" href="index.html">Voltar ao Início</a>
+        </div>
+
 
     </div>
 

@@ -5,160 +5,343 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Press+Start+2P" rel="stylesheet">
-    <script type="text/javascript" src="js/scripts.js"></script>
+    
+    <script>
+        // Função do Menu Responsivo
+        function openNav() {
+            var x = document.getElementById("navigation");
+            if (x.className === "navigation") {
+                x.className += " responsive";
+            } else {
+                x.className = "navigation";
+            }
+        }
+    </script>
     
     <style>
+        /* -------------------------------------- */
+        /* 1. VARIÁVEIS E TEMA AZUL PROFUNDO TECH */
+        /* -------------------------------------- */
+        :root {
+            --cor-fundo: #111111; /* Fundo Escuro */
+            --cor-texto: #FFFFFF; /* Texto Claro */
+            --cor-destaque: #007FFF; /* Azul Elétrico/Capacete (Principal) */
+            --cor-acento: #003593; /* Azul Profundo (Secundário/Linhas) */
+            --cor-borda: #333333; /* Borda Escura Sutil */
+            --cor-cinza: #AAAAAA; /* Texto Secundário */
+            --cor-cita: #1F1F1F; /* Fundo da citação/blockquote */
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
             margin: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
         }
         .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #007bff;
-            font-family: 'Press Start 2P', cursive;
-            font-size: 1.5em;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #007bff;
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #007bff;
-            font-size: 1.1em;
-            margin-top: 5px;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: var(--cor-fundo);
         }
         
-        /* Estilos de Navegação e Caminho */
+        /* Títulos */
+        h1 {
+            color: var(--cor-destaque);
+            font-size: 2em;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--cor-acento);
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(0, 127, 255, 0.4); /* Sombra Neon Azul */
+        }
+        h2 {
+            color: var(--cor-texto);
+            border-bottom: 1px solid var(--cor-borda);
+            padding-bottom: 5px;
+            margin-top: 35px;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+        p {
+            margin: 10px 0;
+            text-align: justify;
+            color: var(--cor-cinza); 
+        }
+
+        /* -------------------------------------- */
+        /* 2. NAVEGAÇÃO E CAMINHO */
+        /* -------------------------------------- */
         #navigation {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
+            background-color: var(--cor-destaque);
+            color: black;
+            padding: 15px 20px;
+            position: relative;
         }
         #navigation ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            display: inline-block;
+            text-align: center;
         }
         #navigation li {
             display: inline;
-            margin: 0 15px;
+            margin: 0 20px;
         }
         #navigation a {
-            color: white;
+            color: black;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 5px 0;
+            transition: color 0.3s;
         }
+        #navigation a:hover {
+            color: white; 
+        }
+        #threeline-icon {
+            display: none; 
+            color: black; 
+        }
+
         .caminho {
             list-style-type: none;
             padding: 0;
             margin: 0 0 20px 0;
-            font-size: 0.8em;
-            color: #777;
+            font-size: 0.9em;
+            color: var(--cor-cinza);
         }
         .caminho li {
             display: inline;
         }
         .caminho a {
-            color: #007bff;
+            color: var(--cor-cinza);
             text-decoration: none;
         }
+        .caminho a:hover {
+            color: var(--cor-destaque);
+        }
+
+        /* Link de Voltar */
+        .back-link {
+            display: block;
+            margin-top: 40px;
+            color: var(--cor-destaque);
+            text-decoration: none;
+            font-weight: 600;
+            text-align: left;
+            font-size: 1em;
+            transition: color 0.3s;
+            text-shadow: 0 0 2px rgba(0, 127, 255, 0.5);
+        }
+        .back-link:hover {
+            color: var(--cor-acento);
+            text-shadow: 0 0 5px var(--cor-acento);
+        }
         
-        /* Estilos de Miniatura (Projetos) */
-        .miniatura {
-            width: 100%; /* Ocupa a largura total no mobile */
-            height: 250px;
-            margin-bottom: 20px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+        /* -------------------------------------- */
+        /* 3. GRID E MINIATURAS (CARDS) */
+        /* -------------------------------------- */
+
+        /* Layout em Grid para a seção de projetos */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
         }
 
-        .miniatura:hover {
-            transform: translateY(-5px);
-        }
+       /* Estilo base da miniatura (o card) */
+.miniatura {
+    height: 285px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative; /* ESSENCIAL para que o link absoluto funcione */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--cor-borda);
+}
 
+/* REGRA QUE FORÇA O LINK A OCUPAR 100% DA MINIATURA */
+.miniatura a {
+    position: absolute; /* Torna o link independente do fluxo normal */
+    top: 0;
+    left: 0;
+    width: 100%; /* Força a largura total */
+    height: 100%; /* Força a altura total */
+    display: block;
+    text-decoration: none;
+    z-index: 10; /* Garante que o link fique por cima dos outros elementos, exceto o blackbox */
+}
+
+/* Ajuste do blackbox para garantir que ele apareça */
+.blackbox {
+    /* Mantenha o blackbox com position: absolute */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 10px;
+    background: rgba(0, 0, 0, 0.75);
+    color: var(--cor-texto);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: 20; /* DEVE ser maior que o z-index do link, para que o texto/hover funcionem */
+}
+
+/* Oculta a blackbox por padrão e mostra no hover da miniatura */
+.miniatura:not(:hover) .blackbox {
+     opacity: 0;
+}
         .blackbox {
             position: absolute;
             bottom: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 15px;
-            box-sizing: border-box;
-            transition: background 0.3s ease;
-        }
-
-        .blackbox:hover {
-            background: rgba(0, 123, 255, 0.8); /* Cor primária no hover */
+            padding: 15px 10px;
+            background: rgba(0, 0, 0, 0.75); /* Fundo semi-transparente */
+            color: var(--cor-texto);
+            /* Efeito fade-in/out ao passar o mouse */
+            opacity: 1;
+            transition: opacity 0.3s ease;
         }
         
-        .blackbox-text h1, .blackbox-text h2 {
+        /* Oculta a blackbox por padrão e mostra no hover da miniatura */
+        /* Você pode comentar/remover o bloco abaixo se quiser que o blackbox esteja sempre visível */
+        .miniatura:not(:hover) .blackbox {
+             opacity: 0;
+        }
+        
+        /* Estilos do texto dentro do blackbox */
+        .blackbox-text h1 {
+            font-size: 1.1em;
+            font-weight: 700;
             margin: 0;
             padding: 0;
-            border: none;
-            color: white;
-            font-family: 'Montserrat', sans-serif;
+            color: var(--cor-destaque); /* Título do projeto em Azul Neon */
+            border-bottom: none;
+            text-shadow: none;
         }
-        
-        .blackbox-text h1 {
-            font-size: 1.2em;
-            text-shadow: 1px 1px 2px #000;
-        }
-        
         .blackbox-text h2 {
-            font-size: 0.9em;
-            font-weight: normal;
+            font-size: 0.85em;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+            color: var(--cor-cinza); /* Subtítulo em cinza */
+            border-bottom: none;
+            margin-top: 5px;
+        }
+        
+        /* -------------------------------------- */
+        /* 4. MEDIA QUERY PARA RESPONSIVIDADE */
+        /* -------------------------------------- */
+        
+        @media screen and (max-width: 600px) {
+            
+            /* Navegação */
+            #navigation {
+                padding: 15px 10px;
+                text-align: left; 
+            }
+
+            #threeline-icon {
+                display: block !important; 
+                position: absolute;
+                right: 20px;
+                top: 15px;
+                cursor: pointer;
+                font-size: 1.5em;
+                color: black;
+            }
+
+            #navigation ul {
+                display: none; 
+                width: 100%;
+                text-align: left;
+                margin-top: 10px; 
+            }
+
+            #navigation li {
+                display: block; 
+                margin: 0;
+                border-top: 1px solid #1A1A1A; 
+            }
+
+            #navigation a {
+                padding: 12px 20px;
+                display: block;
+                font-weight: 600;
+                color: black;
+            }
+            #navigation a:hover {
+                 color: var(--cor-texto);
+            }
+
+            #navigation.responsive ul {
+                display: block; 
+            }
+
+            /* Grid em Mobile: Coluna única */
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
-        /* Estilo para links de projeto para remover sublinhado */
-        .miniatura a {
-            text-decoration: none;
-            color: inherit;
-            display: block; /* Garante que o link ocupe toda a miniatura */
-            height: 100%;
-        }
+        /* -------------------------------------- */
+/* ESTILO DE BOTÃO DE AÇÃO (Substitui back-link) */
+/* -------------------------------------- */
+.action-button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 40px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    
+    /* Estilo Base Neon */
+    color: var(--cor-destaque); /* Texto Azul Elétrico */
+    background-color: transparent;
+    border: 2px solid var(--cor-destaque);
+    text-shadow: 0 0 5px rgba(0, 127, 255, 0.7);
+    box-shadow: 0 0 10px rgba(0, 127, 255, 0.5);
+} 
 
-        .back-link {
-            display: block;
-            margin-top: 30px;
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-            text-align: center;
-        }
+.action-button:hover { 
+    /* Efeito Interativo no Hover */
+    transform: translateY(-2px); /* Leve subida */
+    background-color: var(--cor-destaque); /* Fundo preenche com Azul Elétrico */
+    color: black; /* Texto escurece */
+    box-shadow: 0 0 20px var(--cor-destaque), 0 0 30px rgba(0, 127, 255, 0.8); /* Brilho mais forte */
+    text-shadow: none;
+}
+/* Estilo de Voltar ao Início (para manter a compatibilidade se necessário) */
+.back-link {
+    display: block;
+    margin-top: 40px;
+    color: var(--cor-destaque);
+    text-decoration: none;
+    font-weight: 600;
+    text-align: left;
+    font-size: 1em;
+    transition: color 0.3s;
+    text-shadow: 0 0 2px rgba(0, 127, 255, 0.5);
+}
+.back-link:hover {
+    color: var(--cor-acento);
+    text-shadow: 0 0 5px var(--cor-acento);
+}
 
-        /* Responsive design para telas maiores */
-        @media (min-width: 768px) {
-            .miniatura {
-                width: calc(33.33% - 20px); /* 3 colunas em desktop */
-                margin-right: 30px;
-                display: inline-block;
-                /* Adicionar clear float se necessário, mas inline-block é mais simples aqui */
-            }
-            .miniatura:nth-child(3n + 1) {
-                clear: none;
-            }
-            .miniatura:nth-child(3n) {
-                margin-right: 0; /* Remove margem do último item da linha */
-            }
-        }
+/* Centraliza o botão no final da página, se não for usar o .back-link */
+.button-center {
+    text-align: center;
+}
     </style>
 </head>
 
@@ -170,7 +353,7 @@
             <li><a href="portfolio.html">Trabalhos</a></li>
             <li><a href="curriculo.html">Currículo</a></li>
             <li><a href="contato.html">Contato</a></li>
-            <li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+         
         </ul>
     </div>
 
@@ -178,7 +361,6 @@
 
         <ul class="caminho">
             <li><a href="index.html">Home</a></li>
-            <li>></li>
             <li>Trabalhos</li>
         </ul>
 
@@ -186,7 +368,7 @@
 
         <section class="projects-grid">
             
-            <div style="background-image: url('img/trabalhos/d4.png')" class="miniatura">
+            <div style="background-image: url('img/trabalhos/capaDommy.png')" class="miniatura">
                 <a href="jogo1.html">
                     <div class="blackbox">
                         <div class="blackbox-text">
@@ -196,41 +378,23 @@
                     </div>
                 </a>
             </div>
+             
+       <div style="background-image: url('img/trabalhos/capaMetal.png')" class="miniatura">
+    <a href="jogo2.html">
+        <div class="blackbox">
+            <div class="blackbox-text">
+                <h1>Metal Armaggedon</h1>
+                <h2>Game Designer | Board Game</h2>
+            </div>
+        </div>
+    </a>
+</div>
 
-            <div style="background-image: url('img/trabalhos/m1.png')" class="miniatura">
-                <a href="jogo2.html">
-                    <div class="blackbox">
-                        <div class="blackbox-text">
-                            <h1>Metal Armaggedon</h1>
-                            <h2>Game Designer | Board Game</h2>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div style="background-image: url('img/trabalhos/b2.jpg')" class="miniatura">
-                <a href="jogo3.html">
-                    <div class="blackbox">
-                        <div class="blackbox-text">
-                            <h1>Dream Adventure and Fantasy</h1>
-                            <h2>Game Designer | Card Game</h2>
-                        </div>
-                    </div>
-                </a>
-            </div>
+       
             
-            <div style="background-image: url('img/trabalhos/bioquiz.jpg')" class="miniatura">
-                <a href="jogo4.html">
-                    <div class="blackbox">
-                        <div class="blackbox-text">
-                            <h1>BioQuiz</h1>
-                            <h2>Game Designer & Programador | Mobile Game</h2>
-                        </div>
-                    </div>
-                </a>
-            </div>
+           
             
-            <div style="background-image: url('img/trabalhos/capa.png')" class="miniatura">
+            <div style="background-image: url('img/trabalhos/capa2.png')" class="miniatura">
                 <a href="jogo4.html">
                     <div class="blackbox">
                         <div class="blackbox-text">
@@ -241,9 +405,11 @@
                 </a>
             </div>
             
-            </section>
+        </section>
 
-        <a class="back-link" href="index.html">&larr; Voltar ao início</a>
+       <div class="button-center">
+            <a class="action-button" href="index.html">Voltar ao Início</a>
+        </div>
 
     </div>
 

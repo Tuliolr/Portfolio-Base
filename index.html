@@ -4,117 +4,275 @@
     <title>Tulio Lopes Rodrigues - Portfolio Online</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css"> 
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Press+Start+2P" rel="stylesheet">
-    <script type="text/javascript" src="js/scripts.js"></script>
+    
+    <script>
+        // FUNÇÃO JAVASCRIPT PARA O MENU RESPONSIVO (HAMBÚRGUER)
+        function openNav() {
+            var x = document.getElementById("navigation");
+            // Se a barra de navegação tem a classe 'navigation' (estado inicial), adiciona 'responsive'
+            if (x.className === "navigation") {
+                x.className += " responsive";
+            } else {
+                // Caso contrário, remove 'responsive', voltando ao estado inicial
+                x.className = "navigation";
+            }
+        }
+    </script>
 
     <style>
+        /* -------------------------------------- */
+        /* 1. VARIÁVEIS E TEMA AZUL PROFUNDO TECH */
+        /* -------------------------------------- */
+        :root {
+            --cor-fundo: #111111; /* Fundo Escuro */
+            --cor-texto: #FFFFFF; /* Texto Claro */
+            --cor-destaque: #007FFF; /* Azul Elétrico/Capacete (Principal) */
+            --cor-acento: #003593; /* Azul Profundo (Secundário/Linhas) */
+            --cor-borda: #333333; /* Borda Escura Sutil */
+            --cor-cinza: #AAAAAA; /* Texto Secundário */
+            --cor-cita: #1F1F1F; /* Fundo da citação/blockquote */
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
             margin: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
         }
         .container {
-            max-width: 700px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: var(--cor-fundo);
         }
-        header {
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #007bff;
-            margin-bottom: 20px;
-        }
+        
+        /* -------------------------------------- */
+        /* 2. ESTILOS GERAIS */
+        /* -------------------------------------- */
+        
+        /* Títulos */
         h1 {
-            color: #007bff;
-            font-family: 'Press Start 2P', cursive;
-            font-size: 1.5em;
-            margin-bottom: 5px;
+            color: var(--cor-destaque);
+            font-size: 2.2em;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--cor-acento);
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(0, 127, 255, 0.4); /* Sombra Neon Azul */
+        }
+        h1 span {
+            color: var(--cor-texto); /* Nome principal em branco */
         }
         h2 {
-            color: #007bff;
-            border-bottom: 2px solid #eee;
+            color: var(--cor-texto);
+            border-bottom: 1px solid var(--cor-borda);
             padding-bottom: 5px;
-            margin-top: 25px;
-            font-size: 1.3em;
+            margin-top: 35px;
+            font-size: 1.4em;
+            font-weight: 600;
         }
         h3 {
-            color: #555;
-            margin-bottom: 5px;
-            font-size: 1.1em;
-            margin-top: 15px;
+            color: var(--cor-destaque);
+            margin-top: 25px;
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        p {
+            margin: 10px 0;
+            text-align: justify;
+            color: var(--cor-cinza); 
         }
         hr {
             border: none;
-            border-top: 1px solid #ccc;
-            margin: 10px 0;
-        }
-        p {
-            margin: 5px 0 10px 0;
+            border-top: 1px solid var(--cor-borda);
+            margin: 30px 0;
         }
         
-        /* Estilos da Capa/Perfil */
+        /* Lista de Links */
+        #links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #links li {
+            padding: 8px 0;
+            border-left: 3px solid var(--cor-acento);
+            padding-left: 15px;
+            margin-bottom: 10px;
+            color: var(--cor-cinza);
+        }
+        #links a {
+            color: var(--cor-destaque);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        #links a:hover {
+            color: var(--cor-texto);
+            text-shadow: 0 0 5px var(--cor-destaque);
+        }
+
+        /* -------------------------------------- */
+        /* 3. CAPA E FOTO DE PERFIL (NOVO ESTILO) */
+        /* -------------------------------------- */
         .capa {
             text-align: center;
-            padding: 40px 0;
-            background-color: #f9f9f9;
-        }
-        .profile-pic img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #007bff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            margin-bottom: 15px;
+            padding-top: 20px;
+            padding-bottom: 10px;
         }
         .profile-title h1 {
-            color: #333; /* Cor mais neutra para o nome na capa */
-            font-size: 2em;
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            letter-spacing: 1px;
-        }
-        .profile-title h1 span {
-            color: #007bff;
-            font-family: 'Press Start 2P', cursive;
-        }
-        .profile-title h2 {
-            font-size: 1.2em;
-            color: #555;
-            margin-top: 5px;
-            border: none;
+            border-bottom: none;
             padding-bottom: 0;
+            margin-bottom: 5px;
         }
         
-        /* Estilos de navegação */
+        /* Contêiner da Imagem (Para o círculo e efeito Neon) */
+        .profile-pic {
+            width: 180px; 
+            height: 180px; 
+            border-radius: 50%; /* Torna o contêiner redondo */
+            overflow: hidden; 
+            margin: 0 auto 25px auto; 
+            border: 3px solid var(--cor-acento); /* Borda inicial (Azul Profundo) */
+            box-shadow: 0 0 10px rgba(0, 53, 147, 0.4); /* Sombra inicial sutil */
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+        }
+        /* A Imagem em si */
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover; /* Garante que a imagem preencha o círculo sem distorção */
+        }
+        /* Efeito Hover Neon */
+        .profile-pic:hover {
+            border: 3px solid var(--cor-destaque); /* Borda Azul Elétrico no hover */
+            box-shadow: 
+                0 0 10px var(--cor-destaque), 
+                0 0 25px var(--cor-destaque), 
+                0 0 40px rgba(0, 127, 255, 0.7); /* Sombra Neon Intensa */
+            transform: scale(1.05); /* Leve zoom */
+        }
+        
+        /* -------------------------------------- */
+        /* 4. PALESTRAS */
+        /* -------------------------------------- */
+        .palestra-item {
+            border-left: 3px solid var(--cor-destaque);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+        .palestra-item h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        .palestra-item p {
+            margin: 0 0 5px 0;
+            font-size: 0.95em;
+        }
+        .palestra-local {
+            display: block;
+            font-size: 0.8em;
+            color: var(--cor-acento);
+            font-weight: 600;
+        }
+
+        /* -------------------------------------- */
+        /* 5. NAVEGAÇÃO (AZUL) */
+        /* -------------------------------------- */
         #navigation {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
+            background-color: var(--cor-destaque);
+            color: black;
+            padding: 15px 20px;
+            position: relative;
         }
         #navigation ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            display: inline-block;
+            text-align: center;
         }
         #navigation li {
             display: inline;
-            margin: 0 15px;
+            margin: 0 20px;
         }
         #navigation a {
-            color: white;
+            color: black;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 5px 0;
+            transition: color 0.3s;
+        }
+        #navigation a:hover {
+            color: white; 
+        }
+        #threeline-icon {
+            display: none;
+        }
+
+        /* -------------------------------------- */
+        /* 6. MEDIA QUERY PARA MENU RESPONSIVO */
+        /* -------------------------------------- */
+        @media screen and (max-width: 600px) {
+            
+            #navigation {
+                padding: 15px 10px;
+                text-align: left; 
+            }
+
+            /* Exibe o ícone do menu hambúrguer */
+            #threeline-icon {
+                display: block !important; 
+                position: absolute;
+                right: 20px;
+                top: 15px;
+                cursor: pointer;
+                font-size: 1.5em;
+                color: black;
+            }
+
+            /* Esconde a lista de links por padrão em telas pequenas */
+            #navigation ul {
+                display: none; 
+                width: 100%;
+                text-align: left;
+                margin-top: 10px; 
+            }
+
+            /* Altera o estilo dos itens de lista para empilhamento vertical */
+            #navigation li {
+                display: block; 
+                margin: 0;
+                border-top: 1px solid #1A1A1A; 
+            }
+
+            /* Ajusta o espaçamento do link para preencher a largura */
+            #navigation a {
+                padding: 12px 20px;
+                display: block;
+                font-weight: 600;
+                color: black;
+            }
+            #navigation a:hover {
+                 color: var(--cor-texto);
+            }
+
+            /* Estado ativo: mostra o menu quando a classe 'responsive' é adicionada */
+            #navigation.responsive ul {
+                display: block; 
+            }
+
+            /* Ajuste de tamanho da foto de perfil em mobile */
+            .profile-pic {
+                width: 150px; 
+                height: 150px;
+            }
         }
     </style>
+
 </head>
 
 <body>
@@ -125,7 +283,7 @@
             <li><a href="portfolio.html">Trabalhos</a></li>
             <li><a href="curriculo.html">Currículo</a></li>
             <li><a href="contato.html">Contato</a></li>
-            <li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+           
         </ul>
     </div>
 
@@ -133,13 +291,14 @@
         
         <div class="capa">
             <div class="profile-pic">
-                <img src="img/tulio.jpg" alt="Foto de Tulio Lopes">
+                <img src="img/trabalhos/tulio.png" alt="Foto de Tulio Lopes">
             </div>
 
-            <div class="profile-title">
-                <h1><span>Tulio Lopes Rodrigues</span></h1>
-                <h2>Game Designer | Level Designer | Desenvolvedor Full-Stack</h2>
-            </div>
+           <div class="profile-title">
+    <h1><span style="color: var(--cor-destaque); text-shadow: 0 0 10px rgba(0, 127, 255, 0.8);">Tulio Lopes Rodrigues</span></h1>
+    
+    <h2 style="color: var(--cor-acento); border-bottom: none; margin-top: 0;">Game Designer | Level Designer | Desenvolvedor Full-Stack</h2>
+</div>
         </div>
         
         <hr>
@@ -151,6 +310,39 @@
                 <p>Minha paixão está em transitar fluentemente entre a concepção criativa (design de sistemas, Level Design, UX/UI) e a implementação técnica (Unity, Unreal, Codificação), sempre aplicando uma visão estratégica do mercado para entregar projetos inovadores e de alta qualidade.</p>
             </div>
         </section>
+
+        <section id="palestras">
+            <h2>Palestras e Contribuições Técnicas 🎙️</h2>
+            <div class="palestra-item">
+                <h3>UX Designer nos Jogos Brasileiros</h3>
+                <p>Foco na Experiência do Usuário (UX) no contexto da produção nacional de games.</p>
+                <span class="palestra-local">(SIDI)</span>
+            </div>
+            
+            <div class="palestra-item">
+                <h3>Mapas Aleatórios de Minecraft em Unity</h3>
+                <p>Abordagem técnica sobre geração procedural de terreno (Procedural Generation) na Unity.</p>
+            </div>
+
+            <div class="palestra-item">
+                <h3>Introdução à Engine Unreal</h3>
+                <p>Visão geral e funcionalidades da Unreal Engine para desenvolvedores.</p>
+            </div>
+
+            <div class="palestra-item">
+                <h3>Advergame: Marketing e Engajamento</h3>
+                <p>O uso de jogos como ferramenta de publicidade e engajamento (Advergame Design).</p>
+                <span class="palestra-local">(SIDI)</span>
+            </div>
+
+            <div class="palestra-item">
+                <h3>Gameficação para Negócios e Educação</h3>
+                <p>Aplicação de mecânicas de jogos em contextos não lúdicos.</p>
+                <span class="palestra-local">(SIDI)</span>
+            </div>
+        </section>
+        
+        <hr>
 
         <section id="links">
             <h2>Acesse Outras Seções</h2>

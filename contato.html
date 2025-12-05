@@ -5,129 +5,290 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Press+Start+2P" rel="stylesheet">
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <script>
+        // FUNÇÃO JAVASCRIPT PARA O MENU RESPONSIVO (HAMBÚRGUER)
+        function openNav() {
+            var x = document.getElementById("navigation");
+            // Se a barra de navegação tem a classe 'navigation' (estado inicial), adiciona 'responsive'
+            if (x.className === "navigation") {
+                x.className += " responsive";
+            } else {
+                // Caso contrário, remove 'responsive', voltando ao estado inicial
+                x.className = "navigation";
+            }
+        }
+    </script>
 
     <style>
+        /* -------------------------------------- */
+        /* 1. VARIÁVEIS E TEMA AZUL PROFUNDO TECH */
+        /* -------------------------------------- */
+        :root {
+            --cor-fundo: #111111; /* Fundo Escuro */
+            --cor-texto: #FFFFFF; /* Texto Claro */
+            --cor-destaque: #007FFF; /* Azul Elétrico/Capacete (Principal) */
+            --cor-acento: #003593; /* Azul Profundo (Secundário/Linhas) */
+            --cor-borda: #333333; /* Borda Escura Sutil */
+            --cor-cinza: #AAAAAA; /* Texto Secundário */
+            --cor-cita: #1F1F1F; /* Fundo da citação/blockquote */
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
             margin: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
         }
         .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #007bff;
-            font-family: 'Press Start 2P', cursive;
-            font-size: 1.5em;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #007bff;
-            margin-bottom: 20px;
-        }
-        h3 {
-            color: #555;
-            margin-bottom: 5px;
-            font-size: 1.1em;
-            margin-top: 15px;
-        }
-        p {
-            margin: 5px 0 15px 0;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: var(--cor-fundo);
         }
         
-        /* Estilos de Navegação e Caminho */
+        /* Títulos */
+        h1 {
+            color: var(--cor-destaque);
+            font-size: 2em;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--cor-acento);
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(0, 127, 255, 0.4); /* Sombra Neon Azul */
+        }
+        h2 {
+            color: var(--cor-texto);
+            border-bottom: 1px solid var(--cor-borda);
+            padding-bottom: 5px;
+            margin-top: 35px;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+        h3 {
+            color: var(--cor-destaque);
+            margin-top: 25px;
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        p {
+            margin: 10px 0;
+            text-align: justify;
+            color: var(--cor-cinza); 
+        }
+
+        /* -------------------------------------- */
+        /* 2. NAVEGAÇÃO E CAMINHO */
+        /* -------------------------------------- */
         #navigation {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
+            background-color: var(--cor-destaque);
+            color: black;
+            padding: 15px 20px;
+            position: relative;
         }
         #navigation ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            display: inline-block;
+            text-align: center;
         }
         #navigation li {
             display: inline;
-            margin: 0 15px;
+            margin: 0 20px;
         }
         #navigation a {
-            color: white;
+            color: black;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 5px 0;
+            transition: color 0.3s;
         }
+        #navigation a:hover {
+            color: white; 
+        }
+        #threeline-icon {
+            display: none; 
+            color: black; 
+        }
+
         .caminho {
             list-style-type: none;
             padding: 0;
             margin: 0 0 20px 0;
-            font-size: 0.8em;
-            color: #777;
+            font-size: 0.9em;
+            color: var(--cor-cinza);
         }
         .caminho li {
             display: inline;
         }
         .caminho a {
-            color: #007bff;
+            color: var(--cor-cinza);
             text-decoration: none;
         }
-
-        /* Estilos do Formulário */
-        .contact-form label {
-            display: block;
-            margin-top: 15px;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #333;
+        .caminho a:hover {
+            color: var(--cor-destaque);
         }
+
+        /* Link de Voltar */
+        .back-link {
+            display: block;
+            margin-top: 40px;
+            color: var(--cor-destaque);
+            text-decoration: none;
+            font-weight: 600;
+            text-align: left;
+            font-size: 1em;
+            transition: color 0.3s;
+            text-shadow: 0 0 2px rgba(0, 127, 255, 0.5);
+        }
+        .back-link:hover {
+            color: var(--cor-acento);
+            text-shadow: 0 0 5px var(--cor-acento);
+        }
+
+        /* -------------------------------------- */
+        /* 3. ESTILOS DE CONTATO DIRETO */
+        /* -------------------------------------- */
+        #direct-contact h3 {
+            margin-bottom: 5px;
+            margin-top: 15px;
+        }
+        #direct-contact p a {
+            color: var(--cor-cinza);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        #direct-contact p a:hover {
+            color: var(--cor-destaque);
+            text-shadow: 0 0 5px rgba(0, 127, 255, 0.5);
+        }
+
+        /* -------------------------------------- */
+        /* 4. FORMULÁRIO DE CONTATO (NOVO ESTILO) */
+        /* -------------------------------------- */
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px 0;
+        }
+
+        .contact-form label {
+            color: var(--cor-texto);
+            font-weight: 600;
+            margin-top: 10px;
+            font-size: 1em;
+            /* Pequena sombra neon na label */
+            text-shadow: 0 0 3px rgba(0, 127, 255, 0.2); 
+        }
+
         .contact-form input[type="text"],
         .contact-form input[type="email"],
         .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
+            padding: 12px;
+            border: 1px solid var(--cor-acento); /* Borda Azul Profundo */
+            background-color: #222222; /* Fundo do input mais escuro */
+            color: var(--cor-texto);
             border-radius: 4px;
-            box-sizing: border-box; /* Garante que o padding não aumente a largura total */
             font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            outline: none;
         }
+
+        /* Efeito Neon no Foco */
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--cor-destaque); /* Borda Azul Elétrico */
+            box-shadow: 0 0 8px rgba(0, 127, 255, 0.6); /* Sombra Neon Azul */
+            background-color: #1A1A1A;
+        }
+
         .contact-form textarea {
             resize: vertical;
-            min-height: 120px;
+            min-height: 150px;
         }
-        .contact-form button {
-            background-color: #007bff;
-            color: white;
-            padding: 12px 20px;
-            border: none;
+
+        /* Botão de Envio (Estilo Neon) */
+        .contact-form button[type="submit"] {
+            padding: 15px 30px;
+            margin-top: 20px;
+            border: 2px solid var(--cor-destaque);
+            background-color: transparent;
+            color: var(--cor-destaque);
+            font-weight: 700;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 1.1em;
-            margin-top: 10px;
-            transition: background-color 0.3s ease;
-        }
-        .contact-form button:hover {
-            background-color: #0056b3;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+
+            /* Estilo Neon */
+            box-shadow: 0 0 10px rgba(0, 127, 255, 0.5);
+            text-shadow: 0 0 5px rgba(0, 127, 255, 0.7);
         }
 
-        .back-link {
-            display: block;
-            margin-top: 30px;
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-            text-align: center;
-            font-size: 1.1em;
+        .contact-form button[type="submit"]:hover {
+            background-color: var(--cor-destaque); /* Fundo Azul Elétrico no hover */
+            color: black;
+            box-shadow: 0 0 20px var(--cor-destaque); 
+            text-shadow: none;
+            transform: translateY(-2px);
         }
 
+        /* -------------------------------------- */
+        /* 5. MEDIA QUERY PARA RESPONSIVIDADE */
+        /* -------------------------------------- */
+        
+        @media screen and (max-width: 600px) {
+            
+            /* Navegação */
+            #navigation {
+                padding: 15px 10px;
+                text-align: left; 
+            }
+
+            #threeline-icon {
+                display: block !important; 
+                position: absolute;
+                right: 20px;
+                top: 15px;
+                cursor: pointer;
+                font-size: 1.5em;
+                color: black;
+            }
+
+            #navigation ul {
+                display: none; 
+                width: 100%;
+                text-align: left;
+                margin-top: 10px; 
+            }
+
+            #navigation li {
+                display: block; 
+                margin: 0;
+                border-top: 1px solid #1A1A1A; 
+            }
+
+            #navigation a {
+                padding: 12px 20px;
+                display: block;
+                font-weight: 600;
+                color: black;
+            }
+            #navigation a:hover {
+                 color: var(--cor-texto);
+            }
+
+            #navigation.responsive ul {
+                display: block; 
+            }
+        }
     </style>
 </head>
 
@@ -139,7 +300,7 @@
             <li><a href="portfolio.html">Trabalhos</a></li>
             <li><a href="curriculo.html">Currículo</a></li>
             <li><a href="contato.html">Contato</a></li>
-            <li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+          
         </ul>
     </div>
 
@@ -147,7 +308,6 @@
         
         <ul class="caminho">
             <li><a href="index.html">Home</a></li>
-            <li>></li>
             <li>Contato</li>
         </ul>
 
@@ -155,10 +315,10 @@
 
         <section id="direct-contact">
             <h3>E-mail:</h3>
-            <p><a href="mailto:tuliolopesr@gmail.com" style="color: #007bff; text-decoration: none;">tuliolopesr@gmail.com</a></p>
+            <p><a href="mailto:tuliolopesr@gmail.com">tuliolopesr@gmail.com</a></p>
 
             <h3>Telefone:</h3>
-            <p><a href="tel:+5527998480550" style="color: #007bff; text-decoration: none;">(27) 99848-0550</a></p>
+            <p><a href="tel:+5527998480550">(27) 99848-0550</a></p>
         </section>
 
         <section id="contact-form">
@@ -181,8 +341,10 @@
             </form>
         </section>
         
-        <br>
-        <a class="back-link" href="index.html">&larr; Voltar ao início</a>
+        <div class="button-center">
+            <a class="action-button" href="index.html">Voltar ao Início</a>
+        </div>
+
 
     </div>
 
