@@ -1,241 +1,283 @@
+/* -------------------------------------- */
+/* 1. VARIÁVEIS E TEMA AZUL PROFUNDO TECH */
+/* -------------------------------------- */
+:root {
+    --cor-fundo: #111111; /* Fundo Escuro */
+    --cor-texto: #FFFFFF; /* Texto Claro */
+    --cor-destaque: #007FFF; /* Azul Elétrico/Capacete (Principal) */
+    --cor-acento: #003593; /* Azul Profundo (Secundário/Linhas) */
+    --cor-borda: #333333; /* Borda Escura Sutil */
+    --cor-cinza: #AAAAAA; /* Texto Secundário */
+    --cor-cita: #1F1F1F; /* Fundo da citação/blockquote */
+}
 
-    /* -------------------------------------- */
-    /* 1. VARIÁVEIS E TEMA AZUL PROFUNDO TECH */
-    /* -------------------------------------- */
-    :root {
-        --cor-fundo: #111111; /* Fundo Escuro */
-        --cor-texto: #FFFFFF; /* Texto Claro */
-        --cor-destaque: #007FFF; /* Azul Elétrico/Capacete (Principal) */
-        --cor-acento: #003593; /* Azul Profundo (Secundário/Linhas) */
-        --cor-borda: #333333; /* Borda Escura Sutil */
-        --cor-cinza: #AAAAAA; /* Texto Secundário */
-        --cor-cita: #1F1F1F; /* Fundo da citação/blockquote */
-    }
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0; 
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: var(--cor-fundo);
+}
 
-    body {
-        font-family: 'Montserrat', sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        background-color: var(--cor-fundo);
-        color: var(--cor-texto);
-    }
-    .container {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 40px 20px;
-        background: var(--cor-fundo);
-    }
+/* Títulos */
+h1 {
+    color: var(--cor-destaque);
+    font-size: 2em;
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--cor-acento); /* Azul Profundo */
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(0, 127, 255, 0.4); /* Sombra Neon Azul */
+}
+h2 {
+    color: var(--cor-texto);
+    border-bottom: 1px solid var(--cor-borda);
+    padding-bottom: 5px;
+    margin-top: 35px;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+h3 {
+    color: var(--cor-destaque);
+    margin-top: 25px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+/* Estilo para sub-títulos do GDD (Mecânicas/Zombie Craft) */
+h4 {
+    color: var(--cor-destaque); 
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-left: 3px solid var(--cor-acento); /* Azul Profundo */
+    padding-left: 10px;
+}
+p {
+    margin: 10px 0;
+    text-align: justify;
+    color: var(--cor-cinza); 
+}
+hr {
+    border: none;
+    border-top: 1px solid var(--cor-borda);
+    margin: 20px 0;
+}
+
+/* -------------------------------------- */
+/* 2. LISTAS E CITAÇÕES (AZUL) */
+/* -------------------------------------- */
+ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+ul li {
+    color: var(--cor-cinza);
+}
+ul ul li { /* Sub-listas de mecânicas */
+    font-size: 0.95em;
+    color: #888;
+    padding: 5px 0;
+    border-left: 1px dashed var(--cor-borda);
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+/* Blockquote (Citações/Destaque) */
+blockquote {
+    border-left: 5px solid var(--cor-destaque); 
+    margin: 20px 0;
+    padding: 15px 20px;
+    background-color: var(--cor-cita); 
+    color: var(--cor-cinza);
+    font-style: italic;
+    box-shadow: 2px 0 5px rgba(0, 127, 255, 0.2); /* Sombra Neon Azul */
+}
+blockquote p {
+    margin: 0;
+    color: var(--cor-cinza);
+}
+blockquote cite {
+    display: block;
+    margin-top: 5px;
+    text-align: right;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* -------------------------------------- */
+/* 3. NAVEGAÇÃO, LINKS E BOTÕES (AZUL) */
+/* -------------------------------------- */
+#navigation {
+    background-color: var(--cor-destaque); /* Azul Elétrico */
+    color: black;
+    /* Garante 100% da largura e remove a faixa preta superior */
+    padding: 15px 0; 
+    width: 100%;
+    box-sizing: border-box; 
+    position: relative;
+}
+#navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#navigation li {
+    display: inline; /* Faz o menu ser horizontal */
+    margin: 0 20px;
+}
+#navigation a {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+#navigation a:hover {
+    color: white; 
+}
+/* Ícone hambúrguer removido */
+#threeline-icon {
+    display: none; 
+}
+
+
+/* NOVO ESTILO: Separador Triangular/Seta (Breadcrumb) */
+.caminho {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-size: 0.9em;
+    color: var(--cor-cinza);
+}
+
+.caminho li {
+    display: inline;
+    position: relative;
+    /* Reduz o espaçamento do breadcrumb */
+    padding-right: 20px; 
+}
+
+/* 1. Cria o Separador (Triângulo/Seta) */
+.caminho li:not(:last-child)::after {
+    content: ''; 
+    position: absolute;
+    /* Ajuste para alinhar com o novo padding-right */
+    right: 5px; 
+    top: 50%;
+    transform: translateY(-50%);
     
-    /* Títulos */
-    h1 {
-        color: var(--cor-destaque);
-        font-size: 2em;
-        font-weight: 700;
-        padding-bottom: 10px;
-        border-bottom: 3px solid var(--cor-acento); /* Azul Profundo */
-        margin-bottom: 30px;
-        text-shadow: 0 0 10px rgba(0, 127, 255, 0.4); /* Sombra Neon Azul */
-    }
-    h2 {
-        color: var(--cor-texto);
-        border-bottom: 1px solid var(--cor-borda);
-        padding-bottom: 5px;
-        margin-top: 35px;
-        font-size: 1.4em;
-        font-weight: 600;
-    }
-    h3 {
-        color: var(--cor-destaque);
-        margin-top: 25px;
-        font-size: 1.2em;
-        font-weight: 700;
-    }
-    /* Estilo para sub-títulos do GDD (Mecânicas/Zombie Craft) */
-    h4 {
-        color: var(--cor-destaque); 
-        margin-top: 20px;
-        font-size: 1.1em;
-        font-weight: 600;
-        border-left: 3px solid var(--cor-acento); /* Azul Profundo */
-        padding-left: 10px;
-    }
-    p {
-        margin: 10px 0;
-        text-align: justify;
-        color: var(--cor-cinza); 
-    }
-    hr {
-        border: none;
-        border-top: 1px solid var(--cor-borda);
-        margin: 20px 0;
-    }
-    
-    /* -------------------------------------- */
-    /* 2. LISTAS E CITAÇÕES (AZUL) */
-    /* -------------------------------------- */
-    ul {
-        padding-left: 20px;
-        margin-bottom: 15px;
-    }
-    ul li {
-        color: var(--cor-cinza);
-    }
-    ul ul li { /* Sub-listas de mecânicas */
-        font-size: 0.95em;
-        color: #888;
-        padding: 5px 0;
-        border-left: 1px dashed var(--cor-borda);
-        padding-left: 10px;
-        margin-bottom: 5px;
-    }
-    
-    /* Blockquote (Citações/Destaque) */
-    blockquote {
-        border-left: 5px solid var(--cor-destaque); 
-        margin: 20px 0;
-        padding: 15px 20px;
-        background-color: var(--cor-cita); 
-        color: var(--cor-cinza);
-        font-style: italic;
-        box-shadow: 2px 0 5px rgba(0, 127, 255, 0.2); /* Sombra Neon Azul */
-    }
-    blockquote p {
-        margin: 0;
-        color: var(--cor-cinza);
-    }
-    blockquote cite {
-        display: block;
-        margin-top: 5px;
-        text-align: right;
-        font-size: 0.9em;
-        color: #555;
-    }
+    /* Configura o Triângulo (Bordas CSS) */
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid var(--cor-acento); /* A seta é na cor Azul Profundo */
+}
 
-    /* -------------------------------------- */
-    /* 3. NAVEGAÇÃO, LINKS E BOTÕES (AZUL) */
-    /* -------------------------------------- */
-    #navigation {
-        background-color: var(--cor-destaque);
-        color: black;
-        padding: 15px 20px;
-        position: relative;
-    }
-    #navigation ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    #navigation li {
-        display: inline;
-        margin: 0 20px;
-    }
-    #navigation a {
-        color: black;
-        text-decoration: none;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        padding: 5px 0;
-        transition: color 0.3s;
-    }
-    #navigation a:hover {
-        color: white; 
-    }
-    #threeline-icon {
-        display: none;
-    }
+/* 2. Estilo do Texto */
 
-    .caminho {
-        list-style-type: none;
-        padding: 0;
-        margin: 0 0 20px 0;
-        font-size: 0.9em;
-        color: var(--cor-cinza);
-    }
-    .caminho li {
-        display: inline;
-    }
-    .caminho a {
-        color: var(--cor-cinza);
-        text-decoration: none;
-    }
-    .caminho a:hover {
-        color: var(--cor-destaque);
-    }
+/* Item atual (sem link) */
+.caminho li:last-child {
+    color: var(--cor-destaque); /* Item atual em Azul Elétrico */
+    font-weight: 600;
+}
 
-    /* Mídia do Projeto */
-    .foto-trabalhos {
-    /* NOVO: Limita a largura máxima da imagem, por exemplo, a 600px */
+/* Links (Home) */
+.caminho li a {
+    color: var(--cor-cinza); /* Cinza Padrão */
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Efeito Neon/Interativo no Hover */
+.caminho li a:hover {
+    color: var(--cor-destaque); /* Azul Elétrico no hover */
+    text-shadow: 0 0 5px rgba(0, 127, 255, 0.5); /* Brilho neon sutil */
+}
+
+/* Efeito Bônus: Mudar a cor do Separador no Hover */
+.caminho li a:hover + .caminho li:not(:last-child)::after {
+    border-left-color: var(--cor-destaque); /* A seta também brilha ao passar o mouse */
+}
+
+/* Mídia do Projeto */
+.foto-trabalhos {
     max-width: 600px; 
-    
-    /* Centraliza a imagem na tela se ela for menor que a largura do contêiner */
     display: block; 
-    margin: 20px auto; /* Define margem superior/inferior de 20px e centraliza horizontalmente */
-    
-    width: 100%; /* Garante que ela ocupe 100% do max-width ou do contêiner em telas pequenas */
+    margin: 20px auto; 
+    width: 100%; 
     height: auto;
     border-radius: 4px; 
     
     /* Estilos Neon e Borda */
-    border: 2px solid var(--cor-acento); /* Aumentei a borda para 2px para destaque, use a cor Azul Profundo */
-    box-shadow: 0 0 10px rgba(0, 127, 255, 0.4); /* Sombra Neon Azul mais evidente */
+    border: 2px solid var(--cor-acento); 
+    box-shadow: 0 0 10px rgba(0, 127, 255, 0.4); 
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
-    .foto-trabalhos:hover {
-        box-shadow: 0 0 15px var(--cor-destaque); 
-    }
+.foto-trabalhos:hover {
+    box-shadow: 0 0 15px var(--cor-destaque); 
+}
+
+/* Botões */
+.button-group { text-align: center; margin-top: 30px; } 
+.project-button { 
+    display: inline-block; 
+    padding: 12px 25px; 
+    margin: 0 10px; 
+    border-radius: 4px; 
+    text-decoration: none; 
+    font-weight: 700; 
+    font-family: 'Montserrat', sans-serif; 
+    transition: all 0.3s ease; 
+    font-size: 1em; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
     
-    /* Botões */
-    .button-group { text-align: center; margin-top: 30px; } 
-    .project-button { 
-        display: inline-block; 
-        padding: 12px 25px; 
-        margin: 0 10px; 
-        border-radius: 4px; 
-        text-decoration: none; 
-        font-weight: 700; 
-        font-family: 'Montserrat', sans-serif; 
-        transition: all 0.3s ease; 
-        font-size: 1em; 
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        
-        /* Estilo Base Neon */
-        color: var(--cor-destaque);
-        background-color: transparent;
-        border: 2px solid var(--cor-destaque);
-        text-shadow: 0 0 5px rgba(0, 127, 255, 0.7);
-        box-shadow: 0 0 10px rgba(0, 127, 255, 0.5);
-    } 
+    /* Estilo Base Neon */
+    color: var(--cor-destaque);
+    background-color: transparent;
+    border: 2px solid var(--cor-destaque);
+    text-shadow: 0 0 5px rgba(0, 127, 255, 0.7);
+    box-shadow: 0 0 10px rgba(0, 127, 255, 0.5);
+} 
 
-    /* Botão Itch.io (Cinza Escuro com Neon) */
-    .itchio-button { 
-        color: var(--cor-texto);
-        background-color: #333; 
-        border: 2px solid #555; 
-        text-shadow: none;
-        box-shadow: none;
-    } 
-    .itchio-button:hover { 
-        background-color: #555;
-        transform: translateY(-2px);
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-    }
+/* Botão Itch.io (Cinza Escuro com Neon) */
+.itchio-button { 
+    color: var(--cor-texto);
+    background-color: #333; 
+    border: 2px solid #555; 
+    text-shadow: none;
+    box-shadow: none;
+} 
+.itchio-button:hover { 
+    background-color: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
 
-    /* Botão GitHub (Azul Elétrico Puro) */
-    .github-button { 
-        color: black; 
-        background-color: var(--cor-destaque); 
-        border-color: var(--cor-destaque);
-        text-shadow: none;
-        box-shadow: 0 0 15px var(--cor-destaque);
-    } 
-    .github-button:hover { 
-        transform: translateY(-2px); 
-        background-color: var(--cor-acento); /* Azul Profundo no hover */
-        box-shadow: 0 0 20px var(--cor-destaque), 0 0 30px rgba(0, 127, 255, 0.8);
-        color: var(--cor-texto); 
-    } 
+/* Botão GitHub (Azul Elétrico Puro) */
+.github-button { 
+    color: black; 
+    background-color: var(--cor-destaque); 
+    border-color: var(--cor-destaque);
+    text-shadow: none;
+    box-shadow: 0 0 15px var(--cor-destaque);
+} 
+.github-button:hover { 
+    transform: translateY(-2px); 
+    background-color: var(--cor-acento); /* Azul Profundo no hover */
+    box-shadow: 0 0 20px var(--cor-destaque), 0 0 30px rgba(0, 127, 255, 0.8);
+    color: var(--cor-texto); 
+} 
 /* ESTILO DE BOTÃO DE AÇÃO (Substitui back-link) */
 /* -------------------------------------- */
 .action-button {
@@ -288,141 +330,18 @@
     text-align: center;
 }
 
-/* -------------------------------------- */
-/* NOVO ESTILO: Separador Triangular/Seta */
-/* -------------------------------------- */
-.caminho {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 0 20px 0;
-    font-size: 0.9em;
+.concept-list {
+    list-style: none; /* Remove bolinhas */
+    padding-left: 0;
+    margin-top: 20px;
+}
+.concept-list li {
+    margin-bottom: 10px;
+    padding: 5px 0;
+    border-bottom: 1px dashed var(--cor-borda); /* Linha tracejada sutil */
     color: var(--cor-cinza);
 }
-
-.caminho li {
-    display: inline;
-    position: relative;
-    /* Ajusta o espaçamento para caber o triângulo */
-    padding-right: 35px; 
+.concept-list li strong {
+    color: var(--cor-destaque); /* Destaque o título da categoria em Azul Neon */
+    margin-right: 5px;
 }
-
-/* 1. Cria o Separador (Triângulo/Seta) */
-.caminho li:not(:last-child)::after {
-    content: ''; 
-    position: absolute;
-    right: 15px; /* Posição à direita */
-    top: 50%;
-    transform: translateY(-50%);
-    
-    /* Configura o Triângulo (Bordas CSS) */
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid var(--cor-acento); /* A seta é na cor Azul Profundo */
-}
-
-/* 2. Estilo do Texto */
-
-/* Item atual (sem link) */
-.caminho li:last-child {
-    color: var(--cor-destaque); /* Item atual em Azul Elétrico */
-    font-weight: 600;
-}
-
-/* Links (Home) */
-.caminho li a {
-    color: var(--cor-cinza); /* Cinza Padrão */
-    text-decoration: none;
-    font-weight: 400;
-    transition: color 0.3s, text-shadow 0.3s;
-}
-
-/* Efeito Neon/Interativo no Hover */
-.caminho li a:hover {
-    color: var(--cor-destaque); /* Azul Elétrico no hover */
-    text-shadow: 0 0 5px rgba(0, 127, 255, 0.5); /* Brilho neon sutil */
-}
-
-/* Efeito Bônus: Mudar a cor do Separador no Hover */
-.caminho li a:hover + .caminho li:not(:last-child)::after {
-    border-left-color: var(--cor-destaque); /* A seta também brilha ao passar o mouse */
-}
-
-.concept-list {
-        list-style: none; /* Remove bolinhas */
-        padding-left: 0;
-        margin-top: 20px;
-    }
-    .concept-list li {
-        margin-bottom: 10px;
-        padding: 5px 0;
-        border-bottom: 1px dashed var(--cor-borda); /* Linha tracejada sutil */
-        color: var(--cor-cinza);
-    }
-    .concept-list li strong {
-        color: var(--cor-destaque); /* Destaque o título da categoria em Azul Neon */
-        margin-right: 5px;
-    }
-  
-
-    /* -------------------------------------- */
-    /* 4. MEDIA QUERY PARA MENU RESPONSIVO */
-    /* -------------------------------------- */
-    @media screen and (max-width: 600px) {
-        
-        #navigation {
-            padding: 15px 10px;
-            text-align: left; 
-        }
-
-        /* Exibe o ícone do menu hambúrguer */
-        #threeline-icon {
-            display: block !important; 
-            position: absolute;
-            right: 20px;
-            top: 15px;
-            cursor: pointer;
-            font-size: 1.5em;
-            color: black;
-        }
-
-        /* Esconde a lista de links por padrão em telas pequenas */
-        #navigation ul {
-            display: none; 
-            width: 100%;
-            text-align: left;
-            margin-top: 10px; 
-        }
-
-        /* Altera o estilo dos itens de lista para empilhamento vertical */
-        #navigation li {
-            display: block; 
-            margin: 0;
-            border-top: 1px solid #1A1A1A; 
-        }
-
-        /* Ajusta o espaçamento do link para preencher a largura */
-        #navigation a {
-            padding: 12px 20px;
-            display: block;
-            font-weight: 600;
-            color: black;
-        }
-        #navigation a:hover {
-             color: var(--cor-texto);
-        }
-
-        /* Estado ativo: mostra o menu quando a classe 'responsive' é adicionada */
-        #navigation.responsive ul {
-            display: block; 
-        }
-         /* Botões em mobile ficam em bloco */
-        .project-button {
-            display: block;
-            margin: 15px 0;
-        }
-
-                /* -------------------------------------- */
-
-    }

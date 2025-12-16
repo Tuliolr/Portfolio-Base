@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Jogos Game Designer - Greek War</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    </head>
+
+<body>
+
+    <div id="navigation" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Trabalhos</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </div>
+
+    <div class="container"> 
+        
+        <ul class="caminho">
+            <li><a href="index.html">Home</a></li><li><a href="portfolio.html">Trabalhos</a></li><li>Greek War</li>
+        </ul>
+
+        <h1>Greek War - Estratégia Tática na Grécia Antiga</h1>
+        
+        <img class="foto-trabalhos" src="img/trabalhos/capaGreeWar.jpg" alt="Capa do Jogo Greek War">
+        
+        <h2>Sumário do Projeto e Mecânicas</h2>
+
+        <section>
+            
+             <h2>Game Design Document (GDD): Greek War</h2> 
+            <p><strong>Visão Geral do Projeto (Elevator Pitch):</strong></p> 
+            <p> Greek War é um jogo de estratégia tática em turnos 3D que combina a astúcia do xadrez com a sagacidade do jogo da velha, tudo ambientado em um campo de batalha inspirado na grandiosidade da Grécia Antiga. Prepare seu baralho, escolha sua civilização e enfrente jogadores do mundo todo em duelos mentais onde cada movimento pode selar a glória... ou a derrota. </p> 
+            <hr> 
+            <h3>Core Loop (Loop Principal) </h3> 
+            <p> O Core Loop é focado em alta rejogabilidade e na aplicação estratégica de recursos e unidades a cada turno: </p> 
+            <blockquote cite="Game Designer"> EXPLORAR/GERENCIAR MÃO > APLICAR HABILIDADES/POSICIONAR UNIDADE > SOLUCIONAR DESAFIO TÁTICO > GANHAR CONTROLE DE ÁREA/AVANÇAR À PRÓXIMA SALA/REPETIR. </blockquote> 
+            <hr> 
+
+            <h3> Plataforma e Target </h3>
+
+            <h4>Plataforma Principal</h4>
+            <ul class="concept-list">
+                <li><strong>Principal:</strong> PC (Windows, macOS)</li>
+                <li><strong>Potenciais:</strong> Consoles (PlayStation, Xbox), Dispositivos Móveis (iOS, Android).</li>
+            </ul>
+
+            <h4>Público-Alvo Primário</h4>
+            <ul class="concept-list">
+                <li><strong>Demografia:</strong> Idade 16-17 anos, Estudantes do Ensino Médio.</li>
+                <li><strong>Psicografia:</strong> Curiosos, competitivos, estratégicos, analíticos e sociais. Buscam dominar sistemas complexos e superar adversários em um ambiente de competição justa.</li>
+            </ul>
+
+            <blockquote cite="Personas - Júlia Mendes e Pedro Almeida">
+                O público primário valoriza a profundidade tática e a oportunidade de interagir socialmente em plataformas online, buscando a sensação de maestria em sistemas complexos.
+            </blockquote>
+            <hr>
+
+            <h2> Key Features (Pilares da Experiência) </h2>
+            <ul>
+                <li><strong>Mecânica Híbrida Inovadora:</strong> Fusão tática de Jogo da Velha (formação de linhas de vitória) e Xadrez (posicionamento e movimento estratégico) em um tabuleiro 6x4.</li>
+                <li><strong>Civilizações Únicas e Assimétricas:</strong> Escolha entre civilizações como Esparta (força bruta), Atenas (controle/flexibilidade), Tebas (defesa) e Delos (recursos/invocações).</li>
+                <li><strong>Sistema de Card Game Integrado:</strong> Deck de 25 cartas (unidades e suporte) para construção de baralho (deckbuilding) e gestão de mão.</li>
+                <li><strong>Estratégia Profunda Baseada em Posicionamento:</strong> O posicionamento das unidades é crucial para formar as linhas de vitória e ativar sinergias de habilidades.</li>
+                <li><strong>Experiência Multiplayer Online Competitiva:</strong> Duelos um contra um com sistema robusto de matchmaking e ranqueamento.</li>
+            </ul>
+            <hr>
+
+            <h2> Fluxo e Mecânicas de Jogo </h2>
+
+            <h4>Estrutura do Jogo</h4>
+            <ul class="concept-list">
+                <li><strong>Tabuleiro:</strong> Grid 6x4 dividido em duas áreas.</li>
+                <li><strong>Objetivo:</strong> Completar uma linha horizontal no tabuleiro com suas unidades.</li>
+                <li><strong>Vista:</strong> Isométrica.</li>
+            </ul>
+
+            <h4>Regras do Turno (3 Fases)</h4>
+            <ul class="concept-list">
+                <li><strong>1. Fase de Saque:</strong> Compra de 1 carta (completa a mão).</li>
+                <li><strong>2. Fase de Construção:</strong> 
+                    <ul>
+                        <li>Joga cartas da mão para o tabuleiro.</li>
+                        <li>Custo da carta = número de unidades já no campo (Custo 1 na 1ª rodada é 0).</li>
+                        <li>Pode substituir unidades após 2 turnos.</li>
+                        <li>Acumula até 5 pontos de construção.</li>
+                        <li>Movimentação de unidades ocorre apenas nesta fase.</li>
+                    </ul>
+                </li>
+                <li><strong>3. Fase de Combate:</strong> 
+                    <ul>
+                        <li>Declara ataques.</li>
+                        <li>Resolução: ATK do atacante > DEF do defensor = eliminação. Empates não eliminam.</li>
+                        <li>A resolução é mostrada após a marcação de todos os combates.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Condições de Vitória</h4>
+            <ul class="concept-list">
+                <li><strong>Vitória Primária:</strong> Completar uma linha horizontal (em qualquer uma das 4 linhas) no tabuleiro com suas unidades.</li>
+                <li><strong>Empate:</strong> Nenhum jogador alcançar a vitória após 25 turnos.</li>
+            </ul>
+            
+            <hr>
+            
+            <h2> Análise SWOT (Game Design) </h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Forças</th>
+                        <th>Fraquezas</th>
+                        <th>Oportunidades</th>
+                        <th>Ameaças</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Conceito Híbrido Único (Jogo da Velha & Xadrez).</td>
+                        <td>Complexidade das mecânicas pode dificultar a curva de aprendizado.</td>
+                        <td>Expansão da base de jogadores com modos de jogo adicionais (Campanha).</td>
+                        <td>Forte concorrência no mercado de jogos de estratégia online e TCGs.</td>
+                    </tr>
+                    <tr>
+                        <td>Imersão na Grécia Antiga e assimetria das Civilizações.</td>
+                        <td>Pode limitar o apelo a um público mais nichado.</td>
+                        <td>Atualizações regulares (conteúdo, eventos) e portabilidade para Mobile/Console.</td>
+                        <td>Problemas técnicos (estabilidade do servidor) e alto custo de manutenção.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="button-group"> 
+                <a href="https://universal-lab.itch.io/greekwar" target="_blank" class="project-button itchio-button"> 🎮 ITCH.IO </a> 
+                <a href="https://store.steampowered.com/app/3852760/Greek_War/" target="_blank" class="project-button github-button">JOGAR NA STEAM</a> 
+            </div>
+            <img class="foto-trabalhos" src="img/trabalhos/menuGreeWar.png" alt="Capa do Jogo Greek War">
+            <img class="foto-trabalhos" src="img/trabalhos/jogabilidade2.jpg" alt="Capa do Jogo Greek War">
+        </section>
+        
+        <br>
+        <div class="button-center">
+            <a class="action-button" href="index.html">Voltar ao Início</a>
+        </div>
+    </div>
+
+</body>
+</html>
