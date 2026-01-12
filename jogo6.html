@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Tulio Rodrigues - Game Designer - Kawaii Push</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div id="navigation" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Trabalhos</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </div>
+
+    <div class="container"> 
+        
+        <ul class="caminho">
+            <li><a href="index.html">Home</a></li><li><a href="portfolio.html">Trabalhos</a></li><li>Kawaii Push</li>
+        </ul>
+
+        <h1>Kawaii Push - Puzzle Sokoban Relaxante</h1>
+        
+        <img class="foto-trabalhos" src="img/trabalhos/capaKawaii.png" alt="Capa do Jogo Kawaii Push">
+        
+        <h2>Sumário do Projeto e Regras de Negócio</h2>
+
+        <section>
+            
+             <h2>Game Design Document (GDD): Kawaii Push</h2> 
+            <p><strong>Visão Geral do Projeto (PUV):</strong></p> 
+            <p> Kawaii Push é um jogo tradicional de empurrar caixas (Sokoban) com uma estética fofa e minimalista. Projetado para ser uma experiência simples e relaxante, é voltado para jogadores casuais de todas as idades que buscam desafios mentais rápidos e satisfatórios. </p> 
+            <hr> 
+
+            <h3>Mínimo Produto Viável (MVP)</h3>
+            <ul class="concept-list">
+                <li>Tela de Título com animações de entrada.</li>
+                <li>30 Fases progressivas divididas em 3 cenários temáticos.</li>
+                <li>Sistema de Pause funcional com retenção de estado do cronômetro.</li>
+                <li>Tela de Final de Jogo (Vitória/Derrota).</li>
+            </ul>
+            <hr>
+
+            <h3>Controles do Jogador</h3>
+            <ul class="concept-list">
+                <li><strong>Movimentação:</strong> Teclado (Setas/WASD), Gamepad (D-Pad e Analógico Esquerdo).</li>
+                <li><strong>Reiniciar Fase:</strong> Botão Y (Gamepad ou Teclado).</li>
+                <li><strong>Pause/Confirmar:</strong> Enter (Teclado) ou Botão Start (Gamepad).</li>
+            </ul>
+            <hr>
+
+            <h3>Progressão e Fluxo de Jogo</h3>
+
+            <h4>1. Inicialização e Telas</h4>
+            <ul class="concept-list">
+                <li><strong>Splash Screen:</strong> Exibição obrigatória da logo do estúdio por 3 segundos (Fade-in/Fade-out).</li>
+                <li><strong>Tela de Título:</strong> Animações coordenadas de logo, ícones (Estrela, Coração, Lua) e personagem com efeito de "Sine" vertical no botão Start.</li>
+                <li><strong>Sistema de Save:</strong> O jogo inicia automaticamente na última fase não concluída (Ex: parou na 5, inicia na 6).</li>
+            </ul>
+
+            <h4>2. Regras de Gameplay</h4>
+            <ul class="concept-list">
+                <li><strong>Contador de Tempo:</strong> 60 segundos por fase. Os controles e o tempo só ativam após 2 segundos de transição.</li>
+                <li><strong>Gestão do Pause:</strong> Ao pausar, o tempo congela imediatamente. O pause é desabilitado durante transições ou no tempo de espera inicial.</li>
+                <li><strong>Condição de Vitória:</strong> Empurrar todas as caixas para os locais indicados dentro do tempo.</li>
+                <li><strong>Condição de Derrota:</strong> Esgotamento do tempo (reinicia a fase atual).</li>
+            </ul>
+
+            <h4>3. Estrutura de Níveis</h4>
+            <ul class="concept-list">
+                <li><strong>Cenário 1:</strong> Fases 01 a 10.</li>
+                <li><strong>Cenário 2:</strong> Fases 11 a 20.</li>
+                <li><strong>Cenário 3:</strong> Fases 21 a 30.</li>
+            </ul>
+            <img class="foto-trabalhos" src="img/trabalhos/Kawaii1.png" alt="Gameplay Kawaii Push">
+            <hr>
+
+            <h2> Análise Técnica (Sistema de Transições) </h2>
+            <blockquote cite="Tulio Rodrigues">
+                A fluidez é prioridade: cada mudança de tela (Menu > Fase > Vitória) deve possuir transições suaves. O cronômetro de fase deve ser preciso, parando em 0 na derrota e fixando o tempo exato de conclusão na vitória para feedback ao jogador.
+            </blockquote>
+
+            <div class="button-group"> 
+                <a href="https://tuliorodrigues.infinityfreeapp.com/" target="_blank" class="project-button itchio-button"> 🎮 JOGAR DEMO </a> 
+                <a href="contato.html" class="project-button github-button">SOLICITAR SPECS</a> 
+            </div>
+
+            <img class="foto-trabalhos" src="img/trabalhos/Kawaiii2.png" alt="Gameplay Kawaii Push">
+        </section>
+        
+        <br>
+        
+    </div>
+
+</body>
+</html>
